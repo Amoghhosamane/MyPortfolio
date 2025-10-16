@@ -58,9 +58,9 @@ const icons = {
 
 const Footer = () => {
   const socialLinks = [
-    { href: 'https://github.com/your-username', Icon: icons.GitHub, title: 'GitHub' },
-    { href: 'https://linkedin.com/in/yourprofile', Icon: icons.LinkedIn, title: 'LinkedIn' },
-    { href: 'https://twitter.com/yourhandle', Icon: icons.X, title: 'X (Twitter)' },
+    { href: 'https://github.com/Amoghhosamane', Icon: icons.GitHub, title: 'GitHub' },
+    { href: 'https://www.linkedin.com/in/amogh-s-hosamane-835823258/', Icon: icons.LinkedIn, title: 'LinkedIn' },
+    { href: 'https://x.com/amoghh09?s=21', Icon: icons.X, title: 'X (Twitter)' },
   ];
 
   return (
