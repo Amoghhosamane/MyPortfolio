@@ -1,0 +1,32 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS classes for the portfolio */
+
+/* Custom padding utility */
+.px-xl {
+    @apply px-4 sm:px-8 lg:px-16 xl:px-32;
+}
+
+.text-hero {
+    @apply text-7xl xl:text-[8rem] font-extrabold;
+}
+
+.text-section-title {
+    @apply text-5xl font-bold;
+}
+
+.accent-text {
+    @apply text-accent;
+}
+
+/* --- CRITICAL ROUTING CSS --- */
+/* This MUST be here to make your components show/hide */
+main > section {
+    display: none;
+}
+#home {
+    display: block;
+}
