@@ -79,7 +79,7 @@ const Footer = () => {
               </svg>
               Amogh Hosamane
             </a>
-            <p className="text-white/60 max-w-sm mt-4">Design, engineering, and strategy for digital products that last.</p>
+            <p className="text-white/60 max-w-sm mt-4">Software engineering, architecture, and systems design for products that perform and last.</p>
           </div>
 
           <div className="footer-col">
@@ -110,7 +110,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom mt-16 pt-5 border-t border-white/10 flex justify-between text-sm text-white/50 flex-wrap gap-4 relative z-10">
-          <span>Built with intent.</span>
+          
           <span>© 2025 Amogh Hosamane. All rights reserved.</span>
         </div>
       </div>
