@@ -59,7 +59,7 @@ const gridItems = [
               I'm <span className="accent-text font-bold">Amogh Hosamane</span>, Aspiring{' '}
               <span className="accent-text inline-block min-w-[180px]">
                 <Typewriter
-                  words={['Software Engineer.', 'Backend Developer.', 'Team Player.']}
+                  words={['Software Architect.', 'Backend Developer.', 'AI/ML engineer.']}
                   loop={0}
                   cursor
                   cursorStyle="|"
