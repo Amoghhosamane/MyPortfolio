@@ -71,7 +71,7 @@ const gridItems = [
             </h1>
             {/* UPDATED: New introductory paragraph */}
             <p className="text-[1.1rem] sm:text-[1.2rem] md:text-[1.25rem] text-white/70 max-w-2xl max-lg:max-w-full">
-              Aspiring Software Engineer with a passion for building reliable and efficient software solutions. Skilled in software development and backend development, with a strong foundation in project management and team collaboration. Eager to contribute to impactful projects while continuously learning and growing in the tech industry.
+              An aspiring Software Architect passionate about designing scalable and efficient software systems. I build robust backend solutions and explore AI/ML concepts to create intelligent, high-performance applications. I thrive on collaborating with teams and turning innovative ideas into impactful projects, while continuously learning and evolving in the tech world.
             </p>
           </div>
 
