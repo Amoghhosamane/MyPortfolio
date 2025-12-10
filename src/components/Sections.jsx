@@ -20,13 +20,35 @@ const IconArrowRight = (props) => (
 // --- Project Data (Used for both Work and Projects sections) ---
 const newProjectsData = [
   {
+    title: 'FNOL AI Orchestrator (Copilot Dev Camp Winner)',
+    descShort: 'First Place 🥇 solution in a 90-minute Ideathon: A multi-agent Copilot system automating insurance claims (First Notice of Loss).',
+    descLong: (
+      <>
+        <p className="text-white/70 mb-3">First Place 🥇 Winner at the Microsoft Copilot Developer Camp Pune Ideathon (90-minute challenge). Developed a high-impact, multi-agent Copilot system to automate the First Notice of Loss (FNOL) process in insurance.</p>
+        <p className="text-white/70 mb-3 font-semibold">The solution reduced manual claims processing time from hours/days to automated execution in seconds.</p>
+        <h4 className="text-white font-medium mt-4 mb-2">Multi-Agent Architecture:</h4>
+        <ul className="list-disc ml-6 space-y-1">
+          <li>Central Orchestrator: Manages the entire claim workflow, calling specialized agents.</li>
+          <li>Data Validation Agent: Verifies policy and claimant information integrity.</li>
+          <li>Damage Severity Agent: Analyzes provided data/images to estimate damage level.</li>
+          <li>Duplicate Detection Agent: Identifies potential fraudulent or redundant claims.</li>
+          <li>Estimation Agent: Provides an initial, automated claim cost projection.</li>
+        </ul>
+      </>
+    ),
+    tags: ['Copilot Studio', 'Multi-Agent AI', 'Enterprise Automation', 'InsuranceTech', 'Workflow Orchestration'],
+    category: 'AI/Automation',
+    color: 'border-yellow-400', // Gold color for winning project
+  },
+
+  {
     title: 'Heart Disease Prediction Model',
     descShort: 'Developed and evaluated ML models (Decision Trees, Logistic Regression, Random Forest, SVM) to predict heart disease.',
     descLong: (
       <>
         <p className="text-white/70 mb-3">Developed and evaluated ML models (Decision Trees, Logistic Regression, Random Forest, SVM) to predict heart disease using 11 clinical features.</p>
         <ul className="list-disc ml-6 space-y-1">
-          <li>Achieved 85% test accuracy with Logistic Regression.</li>
+          <li>Achieved upto 90% test accuracy with Logistic Regression.</li>
           <li>Built an interactive Streamlit UI supporting bulk predictions with real-time visualization using Plotly.</li>
           <li>Deployed the application on Streamlit Community Cloud.</li>
         </ul>
@@ -43,9 +65,9 @@ const newProjectsData = [
       <>
         <p className="text-white/70 mb-3">Developed a responsive cryptocurrency tracking website that displays real-time price updates for Bitcoin, Ethereum, and Dogecoin.</p>
         <ul className="list-disc ml-6 space-y-1">
-          <li>Integrated **AJAX** for asynchronous data fetching to ensure live updates without page reloads.</li>
-          <li>Used **JavaScript and jQuery** for DOM manipulation and interactive UI elements.</li>
-          <li>Gained hands-on experience in **REST APIs** and responsive web design best practices.</li>
+          <li>Integrated AJAX for asynchronous data fetching to ensure live updates without page reloads.</li>
+          <li>Used JavaScript and jQuery for DOM manipulation and interactive UI elements.</li>
+          <li>Gained hands-on experience in REST APIs and responsive web design best practices.</li>
         </ul>
       </>
     ),
@@ -58,11 +80,11 @@ const newProjectsData = [
     descShort: 'Developed a classic Snake Game using Java with Swing and AWT libraries for GUI and event handling.',
     descLong: (
       <>
-        <p className="text-white/70 mb-3">Developed a classic Snake Game using **Java** with Swing and AWT libraries for GUI and event handling.</p>
+        <p className="text-white/70 mb-3">Developed a classic Snake Game using Java with Swing and AWT libraries for GUI and event handling.</p>
         <ul className="list-disc ml-6 space-y-1">
           <li>Implemented keyboard controls for smooth, responsive movement.</li>
           <li>Built a real-time scoring system.</li>
-          <li>Strengthened understanding of **object-oriented programming (OOP)** and game loops.</li>
+          <li>Strengthened understanding of object-oriented programming (OOP) and game loops.</li>
         </ul>
       </>
     ),
@@ -70,6 +92,60 @@ const newProjectsData = [
     category: 'Core Programming',
     color: 'border-blue-500',
   },
+
+  {
+  title: 'Exoplanet Detection with ML (Kepler / K2 / TESS)',
+  descShort: 'Built an ML pipeline to classify transit signals (planet / candidate / false positive) using NASA Kepler, K2, and TESS public datasets.',
+  descLong: (
+    <>
+      <p className="text-white/70 mb-3">
+        Developed a full ML pipeline to automatically identify exoplanet transit signals using open-source datasets from Kepler, K2, and TESS.
+        This project covers data ingestion, feature engineering from light curves, model training, evaluation, and an interactive demo for exploring predictions.
+      </p>
+    
+
+    <h4 className="text-white font-medium mt-4 mb-2">ML Pipeline for Transit Detection: </h4>
+    
+      <ul className="list-disc ml-6 space-y-1">
+        <li>Preprocessed raw light curves (detrending, outlier removal) and engineered features (period, transit depth/duration, folded light-curve statistics).</li>
+        <li>Compared classical ML models (Random Forest, XGBoost) and deep models (1D CNN on folded lightcurves) tuned via cross-validation.</li>
+        <li>Evaluation focused on Precision, Recall, F1-score, and ROC-AUC to minimize false positives.</li>
+        <li>Deployed a Streamlit demo to visualize light curves and show model predictions for new targets; code available on GitHub.</li>
+      </ul>
+    </>
+  ),
+  tags: ['Python', 'scikit-learn', 'XGBoost', 'TensorFlow', 'Lightkurve', 'AstroPy', 'Streamlit', 'Data Science'],
+  category: 'Machine Learning',
+  color: 'border-pink-500',
+},
+
+{
+  title: 'AI Knowledge Retrieval RAG System',
+  descShort: 'Implemented a Retrieval-Augmented Generation (RAG) system using vector databases to enable contextual questioning over private documents.',
+  descLong: (
+    <>
+      <p className="text-white/70 mb-3">
+        Built a powerful RAG system to overcome the knowledge cut-off limits of standard Large Language Models (LLMs). This allows users to ask complex questions based on proprietary or recently updated documents.
+      </p>
+    
+   
+      <h4 className="text-white font-medium mt-4 mb-2">RAG Architecture Flow: 
+
+[Image of Retrieval-Augmented Generation RAG diagram]
+</h4>
+    
+      <ul className="list-disc ml-6 space-y-1">
+        <li>Data Ingestion & Embedding: Used LangChain to chunk documents and convert text into high-dimensional vectors (embeddings) stored in a Chroma vector database.</li>
+        <li>Retrieval: When a query is received, the vector store performs a similarity search to find the most relevant document chunks.</li>
+        <li>Augmentation & Generation: The retrieved context, along with the user query, is passed to an LLM (e.g., GPT-3.5) to generate a grounded, accurate, and non-hallucinatory answer.</li>
+        <li>Demonstrated high accuracy in answering complex, domain-specific questions outside the LLM's original training data.</li>
+      </ul>
+    </>
+  ),
+  tags: ['LLM', 'RAG', 'LangChain', 'ChromaDB', 'Vector Database', 'Python', 'Contextual AI'],
+  category: 'AI/GenAI',
+  color: 'border-cyan-500',
+},
 
 {
   title: 'Exoplanet Detection with ML (Kepler / K2 / TESS)',
@@ -92,6 +168,8 @@ const newProjectsData = [
   category: 'Machine Learning',
   color: 'border-pink-500',
 }
+
+
 ];
 
 
@@ -375,12 +453,12 @@ const About = () => (
                     transition={{ duration: 0.6, delay: 0.1 }}
                 >
                     <p className="text-white/75 mb-4 max-w-2xl text-lg font-light">
-                        I am an **Aspiring Software Engineer** with a passion for building **reliable and efficient software solutions**. 
-                        I possess strong foundational skills in both **software development** and **backend engineering**.
+                        I am an Aspiring Software Engineer with a passion for building reliable and efficient software solutions. 
+                        I possess strong foundational skills in both software development and backend engineering.
                     </p>
                     
                     <p className="text-white/75 mb-4 max-w-2xl text-lg font-light">
-                        I thrive on **team collaboration** and have experience applying **project management** concepts. I am constantly eager to contribute to impactful projects while continuously learning and growing in the tech industry.
+                        I thrive on team collaboration and have experience applying project management concepts. I am constantly eager to contribute to impactful projects while continuously learning and growing in the tech industry.
                     </p>
                     
                     {/* The stat cards should also inherit the motion.div animation */}
@@ -427,8 +505,8 @@ const About = () => (
                         <ul className="list-none text-white/75 space-y-2">
                             <li>• Data Structures and Algorithms (DSA)</li>
                             <li>• Preparation for GATE Exam</li>
-                            <li>• **Machine Learning & AI Algorithms**</li> 
-                            <li>• **Python Backend Development** (using Flask API)</li> 
+                            <li>• Machine Learning & AI Algorithms</li> 
+                            <li>• Python Backend Development (using Flask API)</li> 
                             <li>• Backend System Design & APIs</li>
                             <li>• Full-Stack Project Implementation</li>
                         </ul>
