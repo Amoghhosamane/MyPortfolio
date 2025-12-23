@@ -501,7 +501,7 @@ const About = () => (
                     <div className="stat-cards grid grid-cols-3 gap-3 mt-8 max-w-xl">
                         {/* ... Stat Card 1 ... */}
                         <div className="stat-card text-center p-4 border border-white/10 rounded-lg bg-white/5">
-                            <div className="num text-3xl font-bold text-accent">3+</div>
+                            <div className="num text-3xl font-bold text-accent">10+</div>
                             <div className="label text-sm text-white/70">Major Projects</div>
                         </div>
                         {/* ... Stat Card 2 ... */}
