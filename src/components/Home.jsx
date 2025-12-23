@@ -8,6 +8,7 @@ import myFaceImage from '../assets/my-face.png';
 import mlImage from '../assets/ml.png';
 import webdevImage from '../assets/webdev.png';
 import corepgmImage from '../assets/corepgm.png';
+import openImage from '../assets/open.png';
 import AnimatedSection from './AnimatedSection';
 
 
@@ -34,9 +35,10 @@ const Home = () => {
 
 
 const gridItems = [
-  { category: 'Machine Learning', title: 'Project Alpha', link: '#projects', image: mlImage },
-  { category: 'Web Development', title: 'Project Beta', link: '#projects', image: webdevImage },
-  { category: 'Core Programming', title: 'Project Gamma', size: 'col-span-2 h-[800px] max-lg:col-span-1 max-lg:h-[400px]', link: '#projects', image: corepgmImage },
+  { category: 'Machine Learning', title: 'Project Alpha', subtitle: 'click here to view projects', link: '#projects', image: mlImage },
+  { category: 'Web Development', title: 'Project Beta', subtitle: 'click here to view projects', image: webdevImage },
+  { category: 'Core Programming', title: 'Project Gamma', subtitle: 'click here to view projects', size: 'col-span-2 h-[800px] max-lg:col-span-1 max-lg:h-[400px]' , image: corepgmImage },
+  { category: 'Open Source Contributor 2026', title: '10+ Projects contributed', subtitle: 'many more', size: 'col-span-2 h-[800px] max-lg:col-span-1 max-lg:h-[400px]', image: openImage },
 ];
 
 
@@ -137,7 +139,10 @@ const gridItems = [
               )}
               <div className="project-info relative z-10">
                 <span className="category text-sm text-white/70">{item.category}</span>
-                <h2 className="text-4xl mt-1">{item.title}</h2>
+              <h2 className="text-4xl mt-1">{item.title}</h2>
+              {item.subtitle ? (
+                <p className="text-sm mt-2 text-white/60">{item.subtitle}</p>
+              ) : null}
               </div>
             </motion.a>
           </Tilt>
