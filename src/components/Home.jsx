@@ -8,6 +8,7 @@ import myFaceImage from '../assets/my-face.png';
 import mlImage from '../assets/ml.png';
 import webdevImage from '../assets/webdev.png';
 import corepgmImage from '../assets/corepgm.png';
+import AnimatedSection from './AnimatedSection';
 
 
 // Custom styles for the premium background effect
@@ -70,9 +71,11 @@ const gridItems = [
               </span>
             </h1>
             {/* UPDATED: New introductory paragraph */}
-            <p className="text-[1.1rem] sm:text-[1.2rem] md:text-[1.25rem] text-white/70 max-w-2xl max-lg:max-w-full">
-              An aspiring Software Architect passionate about designing scalable and efficient software systems. I build robust backend solutions and explore AI/ML concepts to create intelligent, high-performance applications. I thrive on collaborating with teams and turning innovative ideas into impactful projects, while continuously learning and evolving in the tech world.
-            </p>
+            <p className="text-[1.1rem] sm:text-[1.2rem] md:text-[1.25rem] text-white/70 max-w-2xl max-lg:max-w-full">
+              An aspiring Software Architect passionate about designing scalable and efficient software systems. I build robust backend solutions and explore AI/ML concepts to create intelligent, high-performance applications. I thrive on collaborating with teams and turning innovative ideas into impactful projects, while continuously learning and evolving in the tech world.
+            </p>
+
+         
           </div>
 
 
@@ -96,6 +99,8 @@ const gridItems = [
           </Transition>
         </div>
       </Transition>
+
+ 
 
 
       {/* PORTFOLIO GRID with 3D TILT and SCROLL ANIMATIONS */}
@@ -138,9 +143,48 @@ const gridItems = [
           </Tilt>
         ))}
       </section>
+
+    {/* Certificates section (moved below projects) */}
+    <AnimatedSection>
+      <div className="mt-8">
+        <h3 className="text-2xl font-semibold mb-4">Certifications</h3>
+        <div className="flex flex-wrap gap-3">
+          {([
+            { title: 'Nvidia - Certification', url: 'https://coursera.org/share/2e28f39fedef9792a6b0a31de40f264d', issuer: 'Coursera' },
+            { title: 'AWS - certification', url: 'https://www.theforage.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_6KwM5DaeEMWteEprr_1766218017786_completion_certificate.pdf', issuer: 'The Forage' },
+            { title: 'Deloitte - certification', url: 'https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_6KwM5DaeEMWteEprr_1765053854242_completion_certificate.pdf', issuer: 'The Forage' },
+            { title: 'Oracle - certification', url: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=3F6777C3950287200568024C8DCEDCE8439C7794682DCFEF6E1044849EFA2384', issuer: 'Oracle university' },
+            { title: 'Hackerrank - certification', url: 'https://www.hackerrank.com/certificates/044dc76c8648', issuer: 'Hackerrank' },
+            { title: 'Google cloud - certification', url: 'https://simpli-web.app.link/e/LXxa7lUxkZb', issuer: 'Simplilearn|SkillUp' },
+            // placeholder
+            { title: 'Many more' },
+          ]).map((cert, i) => {
+            const link = cert.url || '#';
+            const isDisabled = !cert.url;
+            return (
+              <a
+                key={i}
+                href={link}
+                target={isDisabled ? '_self' : '_blank'}
+                rel={isDisabled ? undefined : 'noopener noreferrer'}
+                className={`inline-flex items-center gap-3 px-4 py-2 rounded-md text-sm font-medium shadow-sm transition-transform duration-150 ${isDisabled ? 'bg-white/6 text-white/70 cursor-not-allowed' : 'bg-white text-dark hover:scale-105'}`}
+                aria-label={`Open ${cert.title}`}
+                onClick={(e) => { if (isDisabled) e.preventDefault(); }}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="#111827" />
+                </svg>
+                <span>{cert.title}{cert.issuer ? <span className="ml-2 text-xs text-white/60">· {cert.issuer}</span> : null}</span>
+              </a>
+            );
+            })}
+        </div>
+      </div>
+    </AnimatedSection>
     </section>
   );
 };
+
 
 
 export default Home;
