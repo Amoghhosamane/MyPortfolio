@@ -26,16 +26,16 @@ const contactLimiter = rateLimit({
 
 // Mail transporter
 const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST || 'smtp.gmail.com',
-    port: process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT, 10) : 587,
-    secure: process.env.SMTP_PORT === '465', // true for 465, false for others
-    auth: process.env.SMTP_USER ? {
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // true for port 465
+    auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS
-    } : undefined,
-    tls: {
-        rejectUnauthorized: false // Helps with connection timeouts on some hosts
-    }
+    },
+    connectionTimeout: 10000, // 10 seconds
+    greetingTimeout: 10000,
+    socketTimeout: 30000
 });
 
 const CONTACT_TO = process.env.CONTACT_TO || 'amoghvarsh9614@gmail.com';
