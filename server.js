@@ -7,6 +7,9 @@ import helmet from 'helmet';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Required for express-rate-limit to work correctly on Render/Vercel
+app.set('trust proxy', 1);
+
 // Security + middleware
 app.use(helmet());
 app.use(cors());
@@ -23,10 +26,16 @@ const contactLimiter = rateLimit({
 
 // Mail transporter
 const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
+    host: process.env.SMTP_HOST || 'smtp.gmail.com',
     port: process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT, 10) : 587,
-    secure: process.env.SMTP_SECURE === 'true' || false,
-    auth: process.env.SMTP_USER ? { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS } : undefined,
+    secure: process.env.SMTP_PORT === '465', // true for 465, false for others
+    auth: process.env.SMTP_USER ? {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS
+    } : undefined,
+    tls: {
+        rejectUnauthorized: false // Helps with connection timeouts on some hosts
+    }
 });
 
 const CONTACT_TO = process.env.CONTACT_TO || 'amoghvarsh9614@gmail.com';
