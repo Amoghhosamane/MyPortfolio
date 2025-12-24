@@ -63,7 +63,7 @@ const App = () => {
       case '#skills': return <Skills />;
       case '#about': return <About />;
       // --- THIS LINE WAS MISSING ---
-      case '#contact': return <Contact />; 
+      case '#contact': return <Contact />;
       case '#home':
       default:
         return <Home />;
