@@ -817,8 +817,9 @@ const Contact = () => {
       return;
     }
     setSending(true);
+    const backendUrl = window.location.hostname === 'localhost' ? '/api/contact' : 'https://myportfolio-s7td.onrender.com/api/contact';
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch(backendUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email: emailAddr, reason, _hp }),
