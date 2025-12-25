@@ -23,10 +23,7 @@
 }
 
 /* --- CRITICAL ROUTING CSS --- */
-/* This MUST be here to make your components show/hide */
-main > section {
-    display: none;
-}
-#home {
-    display: block;
+/* Removed hardcoded display rules as React handles component visibility */
+.accent-text {
+    @apply text-blue-500;
 }

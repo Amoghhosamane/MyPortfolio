@@ -43,7 +43,7 @@ const Home = () => {
 
 
   return (
-    <section className="hero-section px-xl pt-[15vh] pb-[10vh] relative" id="home">
+    <section className="hero-section px-xl pt-[12vh] lg:pt-[15vh] pb-[10vh] relative" id="home">
       <style>{customHomeStyles}</style>
 
 
@@ -120,7 +120,7 @@ const Home = () => {
           >
             <motion.a
               href={item.link}
-              className={`grid-item flex flex-col justify-end p-10 h-[600px] bg-dark relative overflow-hidden transition-all hover:bg-dark/95 hover:text-accent group border-b border-white/10 ${item.size || ''}`}
+              className={`grid-item flex flex-col justify-end p-8 md:p-10 h-[450px] md:h-[600px] bg-dark relative overflow-hidden transition-all hover:bg-dark/95 hover:text-accent group border-b border-white/10 ${item.size || ''}`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
