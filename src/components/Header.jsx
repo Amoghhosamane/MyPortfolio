@@ -101,7 +101,7 @@ const Header = ({ activeHash }) => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#work' },
+
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -109,7 +109,6 @@ const Header = ({ activeHash }) => {
   const mobileNavLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#work' },
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
   ];
