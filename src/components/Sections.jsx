@@ -224,7 +224,7 @@ const newProjectsData = [
 // --- Work Section Component (Enhanced with framer-motion & premium logo) ---
 const Work = () => {
   return (
-    <section id="work" className="p-8 md:p-16 bg-black text-white">
+    <section id="work" className="scroll-mt-28 p-8 md:p-16 bg-black text-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-6">
           <h2 id="work-title" className="text-4xl md:text-5xl font-extrabold pb-1 mb-2">
@@ -347,7 +347,7 @@ const Projects = () => {
   }, [selectedCategory]);
 
   return (
-    <section id="projects" className="p-8 md:p-16 bg-black text-white relative">
+    <section id="projects" className="scroll-mt-28 p-8 md:p-16 bg-black text-white relative">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-4xl md:text-5xl font-extrabold pb-2 mb-4">
@@ -372,7 +372,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="project-detail-list grid gap-8">
+        <div className="project-detail-list grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {filtered.map((project, index) => (
             <div
               key={index}
@@ -429,7 +429,7 @@ const Projects = () => {
             />
 
             <motion.aside
-              className="fixed right-0 top-0 h-full w-96 bg-gradient-to-b from-gray-900 to-gray-800 text-white z-50 shadow-2xl p-6"
+              className="fixed right-0 top-0 h-full w-full sm:w-96 bg-gradient-to-b from-gray-900 to-gray-800 text-white z-50 shadow-2xl p-6"
               initial={{ x: '110%' }}
               animate={{ x: 0 }}
               exit={{ x: '110%' }}
