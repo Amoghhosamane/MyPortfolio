@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import AnimatedSection from './AnimatedSection';
 import { FaLinkedin as LinkedIn, FaGithub as GitHub, FaTwitter as X, FaRobot, FaBrain, FaGlobe, FaCode } from "react-icons/fa";
-
+import emailjs from '@emailjs/browser';
 
 // --- Placeholder Icon for Case Study Links ---
 const IconArrowRight = (props) => (
@@ -817,22 +817,24 @@ const Contact = () => {
       return;
     }
     setSending(true);
-    const backendUrl = window.location.hostname === 'localhost' ? '/api/contact' : 'https://myportfolio-s7td.onrender.com/api/contact';
+    
     try {
-      const res = await fetch(backendUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email: emailAddr, reason, _hp }),
-      });
-      const j = await res.json();
-      if (res.ok) {
-        setStatusMsg({ type: 'success', text: j.message || 'Message sent. I will reply soon.' });
-        setName(''); setEmailAddr(''); setReason('');
-      } else {
-        setStatusMsg({ type: 'error', text: j.error || 'Failed to send message.' });
-      }
+      await emailjs.send(
+        'service_gaxm5z5',
+        'template_8pxcijr',
+        {
+          name: name,
+          email: emailAddr,
+          reason: reason,
+        },
+        'TUrQWKZATMqoVJbhx'
+      );
+      
+      setStatusMsg({ type: 'success', text: 'Message sent. I will reply soon.' });
+      setName(''); setEmailAddr(''); setReason('');
     } catch (err) {
-      setStatusMsg({ type: 'error', text: 'Network error. Is the backend running?' });
+      console.error('EmailJS error:', err);
+      setStatusMsg({ type: 'error', text: 'Failed to send message. Please try again.' });
     } finally {
       setSending(false);
     }
