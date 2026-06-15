@@ -196,7 +196,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
         res.json({ success: true, message: 'Message sent' });
     } catch (err) {
         console.error('Mail error:', err);
-        res.status(500).json({ error: 'Failed to send email.' });
+        res.status(500).json({ error: 'Failed to send email.', details: err.message });
     }
 });
 
