@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import { Work, Projects, Skills, About, Contact } from './components/Sections';
+import Experience from './components/Experience';
+import AdminPanel from './components/AdminPanel';
 
 
 
@@ -44,7 +46,14 @@ const App = () => {
       // Simulate loading delay
       setTimeout(() => {
         setLoading(false);
-        window.scrollTo(0, 0);
+        if (hash === '#experience') {
+          setTimeout(() => {
+            const el = document.getElementById('experience');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        } else {
+          window.scrollTo(0, 0);
+        }
       }, 600);
     };
 
@@ -62,13 +71,19 @@ const App = () => {
       case '#projects': return <Projects />;
       case '#skills': return <Skills />;
       case '#about': return <About />;
-      // --- THIS LINE WAS MISSING ---
       case '#contact': return <Contact />;
+      case '#experience': 
+      case '#admin': return <AdminPanel />;
       case '#home':
       default:
         return <Home />;
     }
   };
+
+  // Admin panel takes full screen — no header/footer
+  if (activeHash === '#admin') {
+    return <AdminPanel />;
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-dark text-light relative">
@@ -84,7 +99,7 @@ const App = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="min-h-[400px]" // to prevent layout shift
+              className="min-h-[400px]"
             >
               {renderSection()}
             </motion.div>

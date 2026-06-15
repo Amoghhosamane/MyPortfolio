@@ -10,6 +10,7 @@ import webdevImage from '../assets/webdev.png';
 import corepgmImage from '../assets/corepgm.png';
 import openImage from '../assets/open.png';
 import AnimatedSection from './AnimatedSection';
+import Experience from './Experience';
 
 
 // Custom styles for the premium background effect
@@ -105,6 +106,11 @@ const Home = () => {
 
 
 
+      {/* Experience Section */}
+      <AnimatedSection>
+        <Experience />
+      </AnimatedSection>
+
       {/* PORTFOLIO GRID with 3D TILT and SCROLL ANIMATIONS */}
       <section className="portfolio-grid grid grid-cols-2 max-lg:grid-cols-1 gap-px bg-white/10">
         {gridItems.map((item, index) => (
@@ -186,6 +192,8 @@ const Home = () => {
           </div>
         </div>
       </AnimatedSection>
+
+
     </section>
   );
 };

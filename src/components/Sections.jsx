@@ -251,9 +251,9 @@ const Work = () => {
                 whileHover={{ scale: 1.03, y: -6 }}
                 transition={{ type: 'spring', stiffness: 260, damping: 22, delay: index * 0.04 }}
               >
-                <div className="flex items-start justify-between">
-                  <h3 className="text-xl font-bold mb-3">{card.title}</h3>
-                  <span className="text-xs uppercase text-white/60">{card.category}</span>
+                <div className="flex flex-col sm:flex-row items-start sm:justify-between gap-2 mb-3">
+                  <h3 className="text-xl font-bold">{card.title}</h3>
+                  <span className="text-xs uppercase text-white/60 shrink-0">{card.category}</span>
                 </div>
 
                 <p className="text-white/70 mb-6 flex-grow">{card.descShort}</p>
@@ -379,7 +379,7 @@ const Projects = () => {
               className="project-detail rounded-xl p-6 bg-gradient-to-br from-gray-900 to-black border border-gray-800 transition-transform duration-500 ease-out hover:translate-x-1"
               style={{ transitionDelay: `${index * 80}ms` }}
             >
-              <div className="flex items-start justify-between">
+              <div className="flex flex-col xl:flex-row items-start xl:justify-between gap-4 mb-4">
                 <div className="flex items-start gap-4">
                   {project.logo ? (
                     <img src={project.logo} alt={`${project.title} logo`} className="w-12 h-12 object-contain rounded-md bg-white/3 p-1" />

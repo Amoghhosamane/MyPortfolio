@@ -1,0 +1,90 @@
+{
+  "experiences": [
+    {
+      "id": "exp-1",
+      "org": "National University of Singapore (NUS)",
+      "role": "Summer Research Intern",
+      "duration": "Apr 2026 – Present",
+      "location": "Singapore · Remote",
+      "bullets": [
+        "Researching Transformer architectures and LLMs",
+        "Contributing to an AI-powered LMS project",
+        "Building intelligent academic assistants",
+        "Optimizing backend systems and APIs",
+        "Exploring scalable AI system design"
+      ],
+      "tags": ["Next.js", "Flask", "LLMs", "Transformers", "Python", "AI Automation"],
+      "color": "border-blue-400",
+      "visible": true,
+      "order": 0
+    },
+    {
+      "id": "exp-2",
+      "org": "Insight Research Ireland Centre for Data Analytics",
+      "role": "AI Research Intern",
+      "duration": "May 2026 – Present",
+      "location": "Galway, Ireland · Remote",
+      "bullets": [
+        "Working on AI research initiatives and data-driven systems",
+        "Contributing to research-oriented development workflows",
+        "Exploring scalable AI applications and practical implementation"
+      ],
+      "tags": ["AI Research", "Python", "Machine Learning", "Data Analytics", "Docker", "Kubernetes", "PostgreSQL"],
+      "color": "border-emerald-400",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "id": "exp-3",
+      "org": "Australian National University (ANU)",
+      "role": "Volunteer Software Engineer",
+      "duration": "Feb 2026 – Present",
+      "location": "Canberra, Australia · Remote",
+      "bullets": [
+        "Developing decentralized applications using Solid standards",
+        "Working with WebID authentication and Pod-based storage",
+        "Improving responsiveness and frontend performance",
+        "Contributing to scalable AI system exploration"
+      ],
+      "tags": ["Flutter", "Dart", "Python", "C++", "Solid Pods", "WebID"],
+      "color": "border-yellow-400",
+      "visible": true,
+      "order": 2
+    },
+    {
+      "id": "exp-4",
+      "org": "Open Source Connect (OSCG)",
+      "role": "Mentor & Contributor",
+      "duration": "Jan 2026 – Feb 2026",
+      "location": "",
+      "bullets": [
+        "Mentored students in Python and AI projects",
+        "Guided collaborative development workflows",
+        "Helped with open-source software engineering"
+      ],
+      "tags": ["Python", "AI", "Mentorship", "Open Source"],
+      "color": "border-purple-400",
+      "visible": true,
+      "order": 3
+    }
+  ],
+  "projects": [],
+  "skills": [],
+  "certifications": [],
+  "about": {
+    "bio": "I am an Aspiring Software Engineer with a passion for building reliable and efficient software solutions. I possess strong foundational skills in both software development and backend engineering.",
+    "focusAreas": [
+      "Data Structures and Algorithms (DSA)",
+      "Preparation for GATE Exam",
+      "Machine Learning & AI Algorithms",
+      "Python Backend Development (using Flask API)",
+      "Backend System Design & APIs",
+      "Full-Stack Project Implementation"
+    ]
+  },
+  "resume": {
+    "url": "",
+    "visible": true
+  },
+  "research": []
+}

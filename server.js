@@ -3,22 +3,45 @@ import cors from 'cors';
 import nodemailer from 'nodemailer';
 import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
+import { createRequire } from 'module';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Admin config
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin123';
+const DATA_FILE = path.join(__dirname, 'portfolio-data.json');
+const UPLOADS_DIR = path.join(__dirname, 'public', 'uploads');
+
+// Ensure uploads directory exists
+if (!existsSync(UPLOADS_DIR)) {
+  mkdirSync(UPLOADS_DIR, { recursive: true });
+}
+
+// Simple in-memory token store (single user, personal portfolio)
+let adminToken = null;
 
 // Required for express-rate-limit to work correctly on Render/Vercel
 app.set('trust proxy', 1);
 
 // Security + middleware
-app.use(helmet());
+app.use(helmet({ crossOriginEmbedderPolicy: false }));
 app.use(cors());
-app.use(express.json());
+app.use(express.json({ limit: '10mb' }));
+
+// Serve uploaded files
+app.use('/uploads', express.static(UPLOADS_DIR));
 
 // Rate limiter for contact endpoint
 const contactLimiter = rateLimit({
-    windowMs: 60 * 1000, // 1 minute
-    max: 30, // Increased limit for easier testing
+    windowMs: 60 * 1000,
+    max: 30,
     standardHeaders: true,
     legacyHeaders: false,
     message: { error: 'Too many requests, please try again later.' }
@@ -28,37 +51,125 @@ const contactLimiter = rateLimit({
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
-    secure: true, // true for port 465
+    secure: true,
     auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS
     },
-    connectionTimeout: 10000, // 10 seconds
+    connectionTimeout: 10000,
     greetingTimeout: 10000,
     socketTimeout: 30000
 });
 
 const CONTACT_TO = process.env.CONTACT_TO || 'amoghvarsh9614@gmail.com';
 
-// Root health
+// ─── Helper: read/write portfolio data ──────────────────────────────────────
+function readData() {
+  try {
+    return JSON.parse(readFileSync(DATA_FILE, 'utf-8'));
+  } catch (e) {
+    return { experiences: [], projects: [], skills: [], certifications: [], about: {}, resume: {}, research: [] };
+  }
+}
+
+function writeData(data) {
+  writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf-8');
+}
+
+// ─── Middleware: verify admin token ─────────────────────────────────────────
+function requireAdmin(req, res, next) {
+  const token = req.headers['x-admin-token'];
+  if (!token || token !== adminToken) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+  next();
+}
+
+// ─── Public API ──────────────────────────────────────────────────────────────
+
+// Root health check
 app.get('/', (req, res) => {
     res.send('Portfolio server is running');
 });
 
-// Contact endpoint (with honeypot + validation + rate limit)
+// GET /api/portfolio — public, returns visible data
+app.get('/api/portfolio', (req, res) => {
+  const data = readData();
+  // Filter to only visible items for public view
+  const publicData = {
+    ...data,
+    experiences: (data.experiences || [])
+      .filter(e => e.visible !== false)
+      .sort((a, b) => (a.order ?? 0) - (b.order ?? 0)),
+  };
+  res.json(publicData);
+});
+
+// ─── Admin Auth ──────────────────────────────────────────────────────────────
+app.post('/api/admin/login', (req, res) => {
+  const { password } = req.body || {};
+  if (!password || password !== ADMIN_PASSWORD) {
+    return res.status(401).json({ error: 'Invalid password' });
+  }
+  // Generate a simple random token
+  adminToken = Math.random().toString(36).slice(2) + Date.now().toString(36);
+  res.json({ token: adminToken });
+});
+
+app.post('/api/admin/logout', requireAdmin, (req, res) => {
+  adminToken = null;
+  res.json({ ok: true });
+});
+
+// ─── Admin Data CRUD ─────────────────────────────────────────────────────────
+
+// GET all data (admin view — includes hidden items)
+app.get('/api/admin/data', requireAdmin, (req, res) => {
+  res.json(readData());
+});
+
+// PUT — overwrite entire portfolio data
+app.put('/api/admin/data', requireAdmin, (req, res) => {
+  try {
+    const newData = req.body;
+    if (!newData || typeof newData !== 'object') {
+      return res.status(400).json({ error: 'Invalid data' });
+    }
+    writeData(newData);
+    res.json({ ok: true, message: 'Portfolio data saved successfully.' });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to write data: ' + e.message });
+  }
+});
+
+// POST /api/admin/upload — file upload as base64
+app.post('/api/admin/upload', requireAdmin, (req, res) => {
+  try {
+    const { filename, data: base64Data, mimeType } = req.body || {};
+    if (!filename || !base64Data) {
+      return res.status(400).json({ error: 'Missing filename or data' });
+    }
+    // Sanitize filename
+    const safe = path.basename(filename).replace(/[^a-zA-Z0-9._-]/g, '_');
+    const unique = `${Date.now()}_${safe}`;
+    const dest = path.join(UPLOADS_DIR, unique);
+    const buffer = Buffer.from(base64Data, 'base64');
+    writeFileSync(dest, buffer);
+    res.json({ ok: true, url: `/uploads/${unique}` });
+  } catch (e) {
+    res.status(500).json({ error: 'Upload failed: ' + e.message });
+  }
+});
+
+// ─── Contact endpoint ────────────────────────────────────────────────────────
 app.post('/api/contact', contactLimiter, async (req, res) => {
     const { name, phone, email, reason, _hp } = req.body || {};
-
-    // Honeypot: if filled, likely a bot
     if (_hp) return res.status(400).json({ error: 'Spam detected' });
-
     if (!name || !email || !reason) {
         return res.status(400).json({ error: 'Missing required fields' });
     }
-
-    // Basic validation
     if (typeof name !== 'string' || name.length < 2) return res.status(400).json({ error: 'Invalid name' });
-    if (typeof email !== 'string' || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return res.status(400).json({ error: 'Invalid email' });
+    if (typeof email !== 'string' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return res.status(400).json({ error: 'Invalid email' });
 
     const html = `
         <h3>New contact form submission</h3>
@@ -67,7 +178,6 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
         <p><strong>Message:</strong><br/>${escapeHtml(reason).replace(/\n/g, '<br/>')}</p>
     `;
-
     const mailOptions = {
         from: process.env.SMTP_FROM || process.env.SMTP_USER || 'no-reply@example.com',
         to: CONTACT_TO,
@@ -78,27 +188,24 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
     try {
         if (!process.env.SMTP_HOST || !process.env.SMTP_USER) {
             console.log('--- TEST MODE: No SMTP credentials found ---');
-            console.log('Message details:');
             console.log(`From: ${name} (${email})`);
             console.log(`Reason: ${reason}`);
-            console.log('-------------------------------------------');
             return res.json({ success: true, message: 'Message received (Test Mode: active)' });
         }
-
         await transporter.sendMail(mailOptions);
         res.json({ success: true, message: 'Message sent' });
     } catch (err) {
         console.error('Mail error:', err);
-        res.status(500).json({ error: 'Failed to send email. Check backend logs for details.' });
+        res.status(500).json({ error: 'Failed to send email.' });
     }
 });
 
 function escapeHtml(str) {
     if (!str) return '';
     return String(str).replace(/[&<>"']/g, function (s) {
-        return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": "&#39;" })[s];
+        return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[s];
     });
 }
 
 // Start server
-app.listen(PORT, () => console.log(`Server listening on ${PORT}`));
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
