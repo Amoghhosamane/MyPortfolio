@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 // Default fallback experience data (used if API is offline)
 const FALLBACK_DATA = {
@@ -71,6 +71,12 @@ const FALLBACK_DATA = {
       order: 3,
     },
   ],
+  projects: [],
+  skills: [],
+  certifications: [],
+  about: {},
+  resume: {},
+  research: [],
 };
 
 const API_BASE =
@@ -78,40 +84,82 @@ const API_BASE =
     ? 'http://localhost:5000'
     : 'https://myportfolio-s7td.onrender.com';
 
+const CACHE_KEY = 'portfolio_data_cache';
+
+// Helper to get initial data from local cache or fallback
+function getInitialData() {
+  try {
+    const cached = localStorage.getItem(CACHE_KEY);
+    if (cached) {
+      const parsed = JSON.parse(cached);
+      return { ...FALLBACK_DATA, ...parsed };
+    }
+  } catch (_) {}
+  return FALLBACK_DATA;
+}
+
 export function usePortfolioData() {
-  const [data, setData] = useState(FALLBACK_DATA);
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(getInitialData);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    let cancelled = false;
-    setLoading(true);
-    fetch(`${API_BASE}/api/portfolio`)
-      .then((r) => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
-      })
-      .then((json) => {
-        if (!cancelled) {
-          // Merge: prefer API data, but fall back to defaults for missing keys
-          setData({ ...FALLBACK_DATA, ...json });
-          setError(null);
-        }
-      })
-      .catch((e) => {
-        if (!cancelled) {
-          console.warn('Portfolio API unavailable, using fallback data.', e.message);
-          setError(e.message);
-          // Keep fallback data
-        }
-      })
-      .finally(() => {
-        if (!cancelled) setLoading(false);
+  const fetchFreshData = useCallback(async () => {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 4000);
+
+    try {
+      const res = await fetch(`${API_BASE}/api/portfolio?_t=${Date.now()}`, {
+        cache: 'no-store',
+        headers: { 'Pragma': 'no-cache', 'Cache-Control': 'no-cache' },
+        signal: controller.signal,
       });
-    return () => { cancelled = true; };
+
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+
+      const merged = { ...FALLBACK_DATA, ...json };
+      setData(merged);
+      try {
+        localStorage.setItem(CACHE_KEY, JSON.stringify(merged));
+      } catch (_) {}
+      setError(null);
+    } catch (e) {
+      if (e.name !== 'AbortError') {
+        setError(e.message);
+      }
+    } finally {
+      clearTimeout(timeoutId);
+      setLoading(false);
+    }
   }, []);
 
-  return { data, loading, error };
+  useEffect(() => {
+    // 1. Initial background fetch on mount
+    fetchFreshData();
+
+    // 2. Fetch on window focus (so data is always live when user switches tabs)
+    const onFocus = () => fetchFreshData();
+    window.addEventListener('focus', onFocus);
+
+    // 3. Listen to live updates from Admin Panel
+    const onDataUpdated = (event) => {
+      if (event.detail) {
+        const merged = { ...FALLBACK_DATA, ...event.detail };
+        setData(merged);
+        try {
+          localStorage.setItem(CACHE_KEY, JSON.stringify(merged));
+        } catch (_) {}
+      }
+    };
+    window.addEventListener('portfolio-data-updated', onDataUpdated);
+
+    return () => {
+      window.removeEventListener('focus', onFocus);
+      window.removeEventListener('portfolio-data-updated', onDataUpdated);
+    };
+  }, [fetchFreshData]);
+
+  return { data, loading, error, refetch: fetchFreshData };
 }
 
 export { API_BASE };

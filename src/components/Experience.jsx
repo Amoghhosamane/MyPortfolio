@@ -72,7 +72,7 @@ const Experience = () => {
           </p>
         </div>
 
-        {loading ? (
+        {experiences.length === 0 && loading ? (
           <div className="flex items-center justify-center py-24">
             <div className="w-3 h-3 rounded-full bg-blue-400 animate-bounce mr-2" style={{ animationDelay: '0ms' }} />
             <div className="w-3 h-3 rounded-full bg-blue-400 animate-bounce mr-2" style={{ animationDelay: '150ms' }} />
@@ -82,10 +82,10 @@ const Experience = () => {
           <motion.div
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true, amount: 0.05 }}
             variants={{
               hidden: {},
-              show: { transition: { staggerChildren: 0.08 } },
+              show: { transition: { staggerChildren: 0.05 } },
             }}
           >
             {/* Timeline layout */}

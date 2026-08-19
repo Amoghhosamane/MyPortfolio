@@ -12,49 +12,22 @@ import AdminPanel from './components/AdminPanel';
 
 
 
-// Loading spinner component
-const LoadingSpinner = () => (
-  <div className="fixed inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm z-[9999]">
-    <style>{`
-      .loader {
-        width: 15px;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        animation: l5 1s infinite linear alternate;
-      }
-      @keyframes l5 {
-          0%  {box-shadow: 20px 0 #3b82f6, -20px 0 #3b82f622; background: #3b82f6}
-          33% {box-shadow: 20px 0 #3b82f6, -20px 0 #3b82f622; background: #3b82f622}
-          66% {box-shadow: 20px 0 #3b82f622, -20px 0 #3b82f6; background: #3b82f622}
-          100%{box-shadow: 20px 0 #3b82f622, -20px 0 #3b82f6; background: #3b82f6}
-      }
-    `}</style>
-    <div className="loader"></div>
-  </div>
-);
-
 const App = () => {
   const [activeHash, setActiveHash] = useState(window.location.hash || '#home');
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const onHashChange = () => {
-      setLoading(true);
       const hash = window.location.hash || '#home';
       setActiveHash(hash);
 
-      // Simulate loading delay
-      setTimeout(() => {
-        setLoading(false);
-        if (hash === '#experience') {
-          setTimeout(() => {
-            const el = document.getElementById('experience');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
-          }, 100);
-        } else {
-          window.scrollTo(0, 0);
-        }
-      }, 600);
+      if (hash === '#experience') {
+        setTimeout(() => {
+          const el = document.getElementById('experience');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 50);
+      } else {
+        window.scrollTo(0, 0);
+      }
     };
 
     window.addEventListener('hashchange', onHashChange);
@@ -72,7 +45,7 @@ const App = () => {
       case '#skills': return <Skills />;
       case '#about': return <About />;
       case '#contact': return <Contact />;
-      case '#experience': 
+      case '#experience': return <Home />;
       case '#admin': return <AdminPanel />;
       case '#home':
       default:
@@ -90,21 +63,18 @@ const App = () => {
       <Header activeHash={activeHash} />
 
       <main className="flex-grow relative">
-        {loading && <LoadingSpinner />}
-        {!loading && (
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeHash}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="min-h-[400px]"
-            >
-              {renderSection()}
-            </motion.div>
-          </AnimatePresence>
-        )}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeHash}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="min-h-[400px]"
+          >
+            {renderSection()}
+          </motion.div>
+        </AnimatePresence>
       </main>
 
       <Footer />

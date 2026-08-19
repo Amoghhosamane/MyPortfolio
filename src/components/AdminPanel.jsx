@@ -684,10 +684,23 @@ const AdminDashboard = ({ token, onLogout }) => {
   // Fetch data on mount
   useEffect(() => {
     setLoading(true);
-    fetch(`${API_BASE}/api/admin/data`, { headers: { 'x-admin-token': token } })
+    fetch(`${API_BASE}/api/admin/data?_t=${Date.now()}`, {
+      cache: 'no-store',
+      headers: {
+        'x-admin-token': token,
+        'Pragma': 'no-cache',
+        'Cache-Control': 'no-cache',
+      },
+    })
       .then((r) => r.json())
-      .then((d) => { setPortfolioData(d); setLoading(false); })
-      .catch((e) => { showToast('Failed to load data: ' + e.message, 'error'); setLoading(false); });
+      .then((d) => {
+        setPortfolioData(d);
+        setLoading(false);
+      })
+      .catch((e) => {
+        showToast('Failed to load data: ' + e.message, 'error');
+        setLoading(false);
+      });
   }, [token]);
 
   const handleDataChange = (newData) => {
@@ -700,13 +713,24 @@ const AdminDashboard = ({ token, onLogout }) => {
     try {
       const res = await fetch(`${API_BASE}/api/admin/data`, {
         method: 'PUT',
-        headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
+        headers: {
+          'Content-Type': 'application/json',
+          'x-admin-token': token,
+          'Cache-Control': 'no-cache',
+        },
         body: JSON.stringify(portfolioData),
       });
       const j = await res.json();
       if (!res.ok) throw new Error(j.error || 'Save failed');
       setHasChanges(false);
-      showToast('Changes saved! Portfolio updated instantly.', 'success');
+
+      // Save to local cache & notify other components instantly
+      try {
+        localStorage.setItem('portfolio_data_cache', JSON.stringify(portfolioData));
+      } catch (_) {}
+      window.dispatchEvent(new CustomEvent('portfolio-data-updated', { detail: portfolioData }));
+
+      showToast('Changes saved permanently in database!', 'success');
     } catch (e) {
       showToast(e.message, 'error');
     } finally {

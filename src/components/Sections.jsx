@@ -221,62 +221,90 @@ const newProjectsData = [
 ];
 
 
-// --- Work Section Component (Enhanced with framer-motion & premium logo) ---
+// --- Work Section Component (Enhanced with framer-motion & mobile-responsive layout) ---
 const Work = () => {
   return (
-    <section id="work" className="scroll-mt-28 p-8 md:p-16 bg-black text-white">
+    <section id="work" className="scroll-mt-28 px-4 py-8 sm:px-6 sm:py-12 md:p-16 bg-black text-white">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-6">
-          <h2 id="work-title" className="text-4xl md:text-5xl font-extrabold pb-1 mb-2">
+        <div className="mb-6 sm:mb-8">
+          <h2 id="work-title" className="text-3xl sm:text-4xl md:text-5xl font-extrabold pb-1 mb-2">
             Technical Projects
           </h2>
-          <p className="text-sm text-white/60">Recognized Technical Work & Case Studies</p>
+          <p className="text-sm sm:text-base text-white/60">Recognized Technical Work & Case Studies</p>
         </div>
 
         <motion.div
           initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          animate="show"
           variants={{
-            hidden: {},
-            show: { transition: { staggerChildren: 0.06 } }
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: { staggerChildren: 0.08, delayChildren: 0.05 },
+            },
           }}
         >
-          <div className="work-grid grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="work-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
             {newProjectsData.map((card, index) => (
               <motion.article
                 key={index}
-                className={`work-card border-l-4 ${card.color} rounded-xl p-7 bg-gradient-to-br from-gray-900 to-black h-full shadow-2xl`}
-                variants={{ hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0 } }}
-                whileHover={{ scale: 1.03, y: -6 }}
-                transition={{ type: 'spring', stiffness: 260, damping: 22, delay: index * 0.04 }}
+                className={`work-card border-l-4 ${card.color} rounded-xl p-5 sm:p-7 bg-gradient-to-br from-gray-900 to-black h-full shadow-2xl flex flex-col justify-between`}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+                }}
+                whileHover={{ scale: 1.02, y: -4 }}
+                whileTap={{ scale: 0.99 }}
               >
-                <div className="flex flex-col sm:flex-row items-start sm:justify-between gap-2 mb-3">
-                  <h3 className="text-xl font-bold">{card.title}</h3>
-                  <span className="text-xs uppercase text-white/60 shrink-0">{card.category}</span>
-                </div>
-
-                <p className="text-white/70 mb-6 flex-grow">{card.descShort}</p>
-
-                <div className="work-meta flex gap-2 flex-wrap mb-4 mt-auto pt-4 border-t border-gray-800">
-                  {card.tags.map(tag => (
-                    <span
-                      key={tag}
-                      className="tag text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/3"
-                    >
-                      {tag}
+                <div>
+                  <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
+                    <h3 className="text-lg sm:text-xl font-bold text-white leading-snug">{card.title}</h3>
+                    <span className="text-xs uppercase font-medium px-2 py-0.5 rounded bg-white/10 text-white/70 shrink-0">
+                      {card.category}
                     </span>
-                  ))}
+                  </div>
+
+                  <p className="text-sm sm:text-base text-white/70 mb-5 leading-relaxed">
+                    {card.descShort}
+                  </p>
                 </div>
 
-                <a
-                  href="#projects"
-                  aria-label={`View ${card.title} case study`}
-                  className="inline-flex items-center gap-2 mt-2 font-semibold text-teal-400 hover:text-teal-300 transition-colors"
-                >
-                  <span className="border-b border-teal-400 hover:border-teal-300">View case study</span>
-                  <IconArrowRight />
-                </a>
+                <div>
+                  <div className="work-meta flex gap-1.5 sm:gap-2 flex-wrap mb-5 pt-4 border-t border-gray-800">
+                    {card.tags.map(tag => (
+                      <span
+                        key={tag}
+                        className="tag text-[11px] sm:text-xs px-2.5 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center justify-between gap-3 pt-2">
+                    <a
+                      href="#projects"
+                      aria-label={`View ${card.title} case study`}
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors py-1"
+                    >
+                      <span className="border-b border-teal-400 hover:border-teal-300">View case study</span>
+                      <IconArrowRight className="w-4 h-4" />
+                    </a>
+
+                    {card.repo && (
+                      <a
+                        href={card.repo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-xs text-white/80 hover:text-white transition-colors border border-white/10"
+                        aria-label={`GitHub repository for ${card.title}`}
+                      >
+                        <GitHub className="w-3.5 h-3.5" />
+                        <span>Code</span>
+                      </a>
+                    )}
+                  </div>
+                </div>
               </motion.article>
             ))}
           </div>
@@ -319,23 +347,20 @@ const Projects = () => {
           return;
         }
       }
-      const stored = localStorage.getItem('selectedCategory');
     } catch (e) {
-      // ignore (SSR or unavailable window)
+      // ignore
     }
   }, []);
 
-  // Persist selection to localStorage and URL
+  // Persist selection to URL
   useEffect(() => {
     try {
       if (selectedCategory) {
-        localStorage.setItem('selectedCategory', selectedCategory);
         const params = new URLSearchParams(window.location.search);
         params.set('cat', selectedCategory);
         const newUrl = `${window.location.pathname}?${params.toString()}`;
         window.history.replaceState({}, '', newUrl);
       } else {
-        localStorage.removeItem('selectedCategory');
         const params = new URLSearchParams(window.location.search);
         params.delete('cat');
         const newUrl = params.toString() ? `${window.location.pathname}?${params.toString()}` : window.location.pathname;
@@ -347,37 +372,39 @@ const Projects = () => {
   }, [selectedCategory]);
 
   return (
-    <section id="projects" className="scroll-mt-28 p-8 md:p-16 bg-black text-white relative">
+    <section id="projects" className="scroll-mt-28 px-4 py-8 sm:px-6 sm:py-12 md:p-16 bg-black text-white relative">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-4xl md:text-5xl font-extrabold pb-2 mb-4">
-            In-Depth Case Studies
-          </h2>
-          <div className="flex items-center gap-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 sm:mb-8">
+          <div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold pb-1">
+              In-Depth Case Studies
+            </h2>
+            <p className="text-sm text-white/60">Architectural breakdowns & implementations</p>
+          </div>
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <button
               onClick={() => setSelectedCategory(null)}
-              className="px-3 py-2 rounded-md bg-white/5 text-white/80 hover:bg-white/6 transition"
+              className={`px-3.5 py-2 rounded-lg text-sm font-medium transition ${!selectedCategory ? 'bg-teal-600 text-white shadow-lg shadow-teal-500/20' : 'bg-white/5 text-white/80 hover:bg-white/10'}`}
               aria-label="Show all categories"
             >
               All
             </button>
             <button
               onClick={() => setDrawerOpen(true)}
-              className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-teal-600 text-white hover:bg-teal-500 transition"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-teal-600 hover:bg-teal-500 text-white font-medium text-sm transition shadow-lg shadow-teal-500/20"
               aria-label="Open category filter"
             >
-              Filter
-              <IconArrowRight />
+              <span>Filter {selectedCategory ? `(${selectedCategory})` : ''}</span>
+              <IconArrowRight className="w-4 h-4" />
             </button>
           </div>
         </div>
 
-        <div className="project-detail-list grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        <div className="project-detail-list grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
           {filtered.map((project, index) => (
             <div
               key={index}
-              className="project-detail rounded-xl p-6 bg-gradient-to-br from-gray-900 to-black border border-gray-800 transition-transform duration-500 ease-out hover:translate-x-1"
-              style={{ transitionDelay: `${index * 80}ms` }}
+              className="project-detail rounded-xl p-5 sm:p-7 bg-gradient-to-br from-gray-900 to-black border border-gray-800 transition-all duration-300 hover:border-gray-700 shadow-xl"
             >
               <div className="flex flex-col xl:flex-row items-start xl:justify-between gap-4 mb-4">
                 <div className="flex items-start gap-4">
