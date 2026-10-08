@@ -118,10 +118,12 @@ const Experience = () => {
                           <p className="text-teal-400 font-semibold text-base">{exp.role}</p>
                         </div>
                         <div className="flex flex-col items-start sm:items-end gap-1 text-xs text-white/60 shrink-0">
-                          <span>
-                            <IconClock />
-                            {exp.duration}
-                          </span>
+                          {exp.duration && (
+                            <span>
+                              <IconClock />
+                              {exp.duration}
+                            </span>
+                          )}
                           {exp.location && (
                             <span>
                               <IconLocation />

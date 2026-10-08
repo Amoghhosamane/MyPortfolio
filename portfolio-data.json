@@ -36,7 +36,7 @@
       "id": "exp-1",
       "org": "National University of Singapore (NUS)",
       "role": "Summer Research Intern",
-      "duration": "Apr 2026 – Present",
+      "duration": "Apr 2026 – Aug 2026",
       "location": "Singapore · Remote",
       "bullets": [
         "Researching Transformer architectures and LLMs",
@@ -51,26 +51,10 @@
       "order": 2
     },
     {
-      "id": "exp-2",
-      "org": "Insight Research Ireland Centre for Data Analytics",
-      "role": "AI Research Intern",
-      "duration": "May 2026 – Present",
-      "location": "Galway, Ireland · Remote",
-      "bullets": [
-        "Working on AI research initiatives and data-driven systems",
-        "Contributing to research-oriented development workflows",
-        "Exploring scalable AI applications and practical implementation"
-      ],
-      "tags": ["AI Research", "Python", "Machine Learning", "Data Analytics", "Docker", "Kubernetes", "PostgreSQL"],
-      "color": "border-emerald-400",
-      "visible": true,
-      "order": 1
-    },
-    {
       "id": "exp-3",
       "org": "Australian National University (ANU)",
       "role": "Volunteer Software Engineer",
-      "duration": "Feb 2026 – Present",
+      "duration": "",
       "location": "Canberra, Australia · Remote",
       "bullets": [
         "Developing decentralized applications using Solid standards",
