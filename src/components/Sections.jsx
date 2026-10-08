@@ -724,7 +724,7 @@ const About = () => (
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <p className="text-white/75 mb-4 max-w-2xl text-lg font-light">
-            I am an Aspiring Software Engineer with a passion for building reliable and efficient software solutions.
+            I am a Software Engineer with a passion for building reliable and efficient software solutions.
             I possess strong foundational skills in both software development and backend engineering.
           </p>
 

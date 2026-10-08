@@ -60,7 +60,7 @@ const Home = () => {
           {/* --- LEFT: Text --- */}
           <div className="flex-1">
             <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] font-semibold leading-snug max-w-[70%] max-lg:max-w-full mb-6">
-              I'm <span className="accent-text font-bold">Amogh Hosamane</span>, Aspiring{' '}
+              I'm <span className="accent-text font-bold">Amogh Hosamane</span>,{' '}
               <span className="accent-text inline-block min-w-[180px]">
                 <Typewriter
                   words={['Software Architect.', 'Backend Developer.', 'AI/ML engineer.']}
@@ -75,7 +75,7 @@ const Home = () => {
             </h1>
             {/* UPDATED: New introductory paragraph */}
             <p className="text-[1.1rem] sm:text-[1.2rem] md:text-[1.25rem] text-white/70 max-w-2xl max-lg:max-w-full">
-              An aspiring Software Architect passionate about designing scalable and efficient software systems. I build robust backend solutions and explore AI/ML concepts to create intelligent, high-performance applications. I thrive on collaborating with teams and turning innovative ideas into impactful projects, while continuously learning and evolving in the tech world.
+              A Software Architect passionate about designing scalable and efficient software systems. I build robust backend solutions and explore AI/ML concepts to create intelligent, high-performance applications. I thrive on collaborating with teams and turning innovative ideas into impactful projects, while continuously learning and evolving in the tech world.
             </p>
 
 
