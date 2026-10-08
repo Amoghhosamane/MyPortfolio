@@ -56,7 +56,7 @@ const Experience = () => {
   const { data, loading } = usePortfolioData();
 
   const experiences = (data.experiences || [])
-    .filter((e) => e.visible !== false)
+    .filter((e) => e.visible !== false && !e.org?.toLowerCase().includes('insight research'))
     .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
 
   return (

@@ -133,6 +133,12 @@ export function usePortfolioData() {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const json = await res.json();
 
+      if (Array.isArray(json.experiences)) {
+        json.experiences = json.experiences.filter(
+          (e) => !e.org?.toLowerCase().includes('insight research')
+        );
+      }
+
       const merged = { ...FALLBACK_DATA, ...json };
       setData(merged);
       try {
