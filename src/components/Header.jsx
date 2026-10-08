@@ -154,7 +154,7 @@ const Header = ({ activeHash }) => {
                 href="https://github.com/AmoghHosamane"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="spotlight-btn px-5 py-3 text-sm font-semibold rounded-[30px]
+                className="spotlight-btn p-3 rounded-full
                          bg-black/50 text-white/90 
                          backdrop-blur-sm border border-white/20 
                          shadow-lg
@@ -162,11 +162,10 @@ const Header = ({ activeHash }) => {
                          hover:bg-black/70 hover:text-white 
                          active:scale-95
                          focus:outline-none focus:ring-2 focus:ring-white/50
-                         flex items-center gap-2"
+                         flex items-center justify-center"
                 aria-label="View GitHub profile"
               >
                 <GitHubIcon className="w-5 h-5 text-white" />
-                <span>GitHub</span>
               </a>
 
               {/* "Projects" button */}
