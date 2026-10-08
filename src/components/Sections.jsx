@@ -915,10 +915,6 @@ const Contact = () => {
             <p className="text-white/70 mb-8 leading-relaxed">Whether you're interested in collaboration, have a project in mind, or just want to connect, I'm always open to new opportunities.</p>
 
             <div className="space-y-6 text-white/80">
-              <div className="flex flex-col gap-1">
-                <strong className="text-teal-400 text-sm uppercase tracking-wider">Location</strong>
-                <div className="text-lg">Belagavi, Karnataka, India</div>
-              </div>
               <div className="flex flex-col gap-1 text-white">
                 <strong className="text-teal-400 text-sm uppercase tracking-wider">Email</strong>
                 <div className="text-lg">amoghvarsh9614@gmail.com</div>
