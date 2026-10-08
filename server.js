@@ -6,12 +6,20 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { MongoClient } from 'mongodb';
+import dotenv from 'dotenv';
+import { Resend } from 'resend';
+
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Resend Email Setup
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const CONTACT_TO = process.env.CONTACT_TO || 'amoghvarsh9614@gmail.com';
 
 // Admin config
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin123';
@@ -144,6 +152,45 @@ function requireAdmin(req, res, next) {
 // Root health check
 app.get('/', (req, res) => {
   res.send('Portfolio server is running. Database: ' + (dbCollection ? 'MongoDB Connected' : 'Local JSON'));
+});
+
+// POST /api/contact — send email via Resend
+app.post('/api/contact', async (req, res) => {
+  const { name, email, reason } = req.body || {};
+  if (!name || !email || !reason) {
+    return res.status(400).json({ error: 'Missing required fields: name, email, reason' });
+  }
+
+  if (!resend) {
+    console.warn('⚠️ RESEND_API_KEY is not set.');
+    return res.status(500).json({ error: 'Email service is not configured (missing RESEND_API_KEY).' });
+  }
+
+  try {
+    const data = await resend.emails.send({
+      from: 'Portfolio Contact <onboarding@resend.dev>',
+      to: [CONTACT_TO],
+      replyTo: email,
+      subject: `Portfolio message from ${name}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; color: #333;">
+          <h2 style="color: #111;">New Portfolio Contact Message</h2>
+          <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+          <p><strong>Message:</strong></p>
+          <div style="background: #f9f9f9; padding: 15px; border-radius: 6px; border: 1px solid #eaeaea; white-space: pre-wrap;">
+            ${reason}
+          </div>
+        </div>
+      `,
+    });
+
+    res.json({ success: true, message: 'Message sent successfully!', data });
+  } catch (err) {
+    console.error('Resend error:', err);
+    res.status(500).json({ error: err.message || 'Failed to send email' });
+  }
 });
 
 // GET /api/portfolio — public, returns visible data from database

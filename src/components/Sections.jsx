@@ -846,22 +846,40 @@ const Contact = () => {
     setSending(true);
     
     try {
-      await emailjs.send(
-        'service_gaxm5z5',
-        'template_8pxcijr',
-        {
-          name: name,
-          email: emailAddr,
-          reason: reason,
-        },
-        'TUrQWKZATMqoVJbhx'
-      );
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: emailAddr.trim(),
+          reason: reason.trim(),
+        }),
+      });
+
+      const resData = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(resData.error || 'Failed to send message.');
+      }
       
-      setStatusMsg({ type: 'success', text: 'Message sent. I will reply soon.' });
+      setStatusMsg({ type: 'success', text: 'Message sent successfully! I will reply soon.' });
       setName(''); setEmailAddr(''); setReason('');
     } catch (err) {
-      console.error('EmailJS error:', err);
-      setStatusMsg({ type: 'error', text: 'Failed to send message. Please try again.' });
+      console.error('Contact submit error:', err);
+      // Fallback to EmailJS if server endpoint fails or is offline
+      try {
+        await emailjs.send(
+          'service_gaxm5z5',
+          'template_8pxcijr',
+          { name, email: emailAddr, reason },
+          'TUrQWKZATMqoVJbhx'
+        );
+        setStatusMsg({ type: 'success', text: 'Message sent. I will reply soon.' });
+        setName(''); setEmailAddr(''); setReason('');
+      } catch (fallbackErr) {
+        console.error('EmailJS fallback failed:', fallbackErr);
+        setStatusMsg({ type: 'error', text: err.message || 'Failed to send message. Please try again.' });
+      }
     } finally {
       setSending(false);
     }

@@ -4,6 +4,38 @@ import { useState, useEffect, useCallback } from 'react';
 const FALLBACK_DATA = {
   experiences: [
     {
+      id: 'exp-0',
+      org: 'Breakthrough Medical Solutions',
+      role: 'Full Stack Developer Intern / Consultant',
+      duration: 'Present',
+      location: 'London · Hybrid',
+      bullets: [
+        'Built an AI-powered clinical simulation platform for UK medical universities using Next.js, TypeScript, FastAPI, Python, Supabase & LLMs.',
+        'Developed real-time collaborative clinical sessions using WebSockets, enabling educator-led and multi-student simulations.',
+        'Engineered LLM-powered patient interactions with case-aware reasoning, progressive disclosure and structured clinical data.',
+        'Built scalable case-authoring and analytics workflows covering history, examination, investigations, diagnosis and management.',
+      ],
+      tags: ['Next.js', 'TypeScript', 'FastAPI', 'Python', 'Supabase', 'LLMs', 'WebSockets'],
+      color: 'border-cyan-400',
+      visible: true,
+      order: 0,
+    },
+    {
+      id: 'exp-galway',
+      org: 'University of Galway',
+      role: 'Research Intern',
+      duration: 'Apr 2025 – Present',
+      location: 'Galway, Ireland · Remote',
+      bullets: [
+        'Researching and studying Multi-Agent AI Systems under Prof. Saeed Alshami.',
+        'Working on multi-agent AI research with the goal of developing and evaluating a research contribution suitable for submission to top-tier AI/ML conferences.',
+      ],
+      tags: ['Multi-Agent AI', 'AI Systems', 'LLMs', 'Research', 'Python', 'Machine Learning'],
+      color: 'border-emerald-400',
+      visible: true,
+      order: 1,
+    },
+    {
       id: 'exp-1',
       org: 'National University of Singapore (NUS)',
       role: 'Summer Research Intern',
@@ -19,7 +51,7 @@ const FALLBACK_DATA = {
       tags: ['Next.js', 'Flask', 'LLMs', 'Transformers', 'Python', 'AI Automation'],
       color: 'border-blue-400',
       visible: true,
-      order: 0,
+      order: 2,
     },
     {
       id: 'exp-2',
