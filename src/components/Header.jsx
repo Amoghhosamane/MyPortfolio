@@ -61,6 +61,7 @@ const Header = ({ activeHash }) => {
   const [show, setShow] = useState(true);
   const lastScrollY = useRef(0);
   const projectsBtnRef = useRef(null); // Ref for the projects button
+  const githubBtnRef = useRef(null); // Ref for the github button
 
   useEffect(() => {
     const controlHeader = () => {
@@ -73,28 +74,29 @@ const Header = ({ activeHash }) => {
       lastScrollY.current = currentScrollY;
     };
 
-    // Logic for the spotlight effect on the button
-    const handleMouseMove = (e) => {
-      if (projectsBtnRef.current) {
-        const rect = projectsBtnRef.current.getBoundingClientRect();
+    const attachSpotlight = (ref) => (e) => {
+      if (ref.current) {
+        const rect = ref.current.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        projectsBtnRef.current.style.setProperty('--x', `${x}px`);
-        projectsBtnRef.current.style.setProperty('--y', `${y}px`);
+        ref.current.style.setProperty('--x', `${x}px`);
+        ref.current.style.setProperty('--y', `${y}px`);
       }
     };
 
+    const handleProjectMove = attachSpotlight(projectsBtnRef);
+    const handleGithubMove = attachSpotlight(githubBtnRef);
+
     window.addEventListener('scroll', controlHeader);
-    const btn = projectsBtnRef.current;
-    if (btn) {
-      btn.addEventListener('mousemove', handleMouseMove);
-    }
+    const pBtn = projectsBtnRef.current;
+    const gBtn = githubBtnRef.current;
+    if (pBtn) pBtn.addEventListener('mousemove', handleProjectMove);
+    if (gBtn) gBtn.addEventListener('mousemove', handleGithubMove);
 
     return () => {
       window.removeEventListener('scroll', controlHeader);
-      if (btn) {
-        btn.removeEventListener('mousemove', handleMouseMove);
-      }
+      if (pBtn) pBtn.removeEventListener('mousemove', handleProjectMove);
+      if (gBtn) gBtn.removeEventListener('mousemove', handleGithubMove);
     };
   }, []);
 
@@ -145,13 +147,29 @@ const Header = ({ activeHash }) => {
             <a href="#home" className="text-xl font-bold transition-color hover:text-accent">
               Portfolio
             </a>
-            <div className="hidden lg:flex items-center gap-6">
+            <div className="hidden lg:flex items-center gap-4">
               {renderNavLinks('flex gap-6')}
-              <a href="https://github.com/AmoghHosamane" target="_blank" rel="noopener noreferrer" className="p-2 text-white/80 hover:text-accent transition-colors" aria-label="View GitHub profile">
-                <GitHubIcon className="w-6 h-6" />
+              <a
+                ref={githubBtnRef}
+                href="https://github.com/AmoghHosamane"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="spotlight-btn px-5 py-3 text-sm font-semibold rounded-[30px]
+                         bg-black/50 text-white/90 
+                         backdrop-blur-sm border border-white/20 
+                         shadow-lg
+                         transition-all duration-300 
+                         hover:bg-black/70 hover:text-white 
+                         active:scale-95
+                         focus:outline-none focus:ring-2 focus:ring-white/50
+                         flex items-center gap-2"
+                aria-label="View GitHub profile"
+              >
+                <GitHubIcon className="w-5 h-5 text-white" />
+                <span>GitHub</span>
               </a>
 
-              {/* UPDATED: "Case Studies" button leads to the detailed view page */}
+              {/* "Projects" button */}
               <a
                 ref={projectsBtnRef}
                 href="#work"
