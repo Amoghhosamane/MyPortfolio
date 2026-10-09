@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import AnimatedSection from './AnimatedSection';
 import { FaLinkedin as LinkedIn, FaGithub as GitHub, FaTwitter as X, FaRobot, FaBrain, FaGlobe, FaCode } from "react-icons/fa";
-import emailjs from '@emailjs/browser';
 
 // --- Placeholder Icon for Case Study Links ---
 const IconArrowRight = (props) => (
@@ -866,20 +865,7 @@ const Contact = () => {
       setName(''); setEmailAddr(''); setReason('');
     } catch (err) {
       console.error('Contact submit error:', err);
-      // Fallback to EmailJS if server endpoint fails or is offline
-      try {
-        await emailjs.send(
-          'service_gaxm5z5',
-          'template_8pxcijr',
-          { name, email: emailAddr, reason },
-          'TUrQWKZATMqoVJbhx'
-        );
-        setStatusMsg({ type: 'success', text: 'Message sent. I will reply soon.' });
-        setName(''); setEmailAddr(''); setReason('');
-      } catch (fallbackErr) {
-        console.error('EmailJS fallback failed:', fallbackErr);
-        setStatusMsg({ type: 'error', text: err.message || 'Failed to send message. Please try again.' });
-      }
+      setStatusMsg({ type: 'error', text: err.message || 'Failed to send message. Please try again.' });
     } finally {
       setSending(false);
     }
