@@ -24,7 +24,7 @@ const newProjectsData = [
     descShort: 'First Place 🥇 solution in a 90-minute Ideathon: A multi-agent Copilot system automating insurance claims (First Notice of Loss).',
     descLong: (
       <>
-        <p className="text-white/70 mb-3">First Place 🥇 Winner at the Microsoft Copilot Developer Camp Pune Ideathon (90-minute challenge). Developed a high-impact, multi-agent Copilot system to automate the First Notice of Loss (FNOL) process in insurance.</p>
+        <p className="text-white/70 mb-3">First Place Winner at the Microsoft Copilot Developer Camp Pune Ideathon (90-minute challenge). Developed a high-impact, multi-agent Copilot system to automate the First Notice of Loss (FNOL) process in insurance.</p>
         <p className="text-white/70 mb-3 font-semibold">The solution reduced manual claims processing time from hours/days to automated execution in seconds.</p>
         <h4 className="text-white font-medium mt-4 mb-2">Multi-Agent Architecture:</h4>
         <ul className="list-disc ml-6 space-y-1">
@@ -174,7 +174,6 @@ const newProjectsData = [
     color: 'border-pink-500',
     repo: 'https://github.com/Amoghhosamane/exoplanet-app',
   },
-  ,
   {
     title: 'Skill Orbit',
     descShort: 'Full-stack learning platform with Next.js, TypeScript, and MongoDB; deployed on Vercel.',
@@ -843,7 +842,7 @@ const Contact = () => {
       return;
     }
     setSending(true);
-    
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -860,7 +859,7 @@ const Contact = () => {
       if (!response.ok) {
         throw new Error(resData.error || 'Failed to send message.');
       }
-      
+
       setStatusMsg({ type: 'success', text: 'Message sent successfully! I will reply soon.' });
       setName(''); setEmailAddr(''); setReason('');
     } catch (err) {
