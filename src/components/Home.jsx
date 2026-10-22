@@ -438,14 +438,14 @@ const ProjectsBuiltForRealWorld = () => {
     <section id="top-projects" className="scroll-mt-24 py-16 text-white relative">
       <div className="max-w-7xl mx-auto">
         {/* Section Header matching visual reference:
-            - Small uppercase "SELECTED WORK" eyebrow in teal
+            - Small uppercase "SELECTED WORK" eyebrow in blue
             - Large bold title: "Projects built for real-world use"
             - Subtitle: "Production-minded systems across AI, healthcare, and developer tooling."
             - Top-right pagination: [←] 01 / 03 [→]
         */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <div className="text-[12px] font-bold tracking-widest text-[#2DD4BF] uppercase mb-3 font-mono">
+            <div className="text-[12px] font-bold tracking-widest text-blue-400 uppercase mb-3 font-mono">
               SELECTED WORK
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">
@@ -515,8 +515,8 @@ const ProjectsBuiltForRealWorld = () => {
                     {/* RIGHT COLUMN: Project Details, Highlights, Tech Stack, Links (5 cols) */}
                     <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
                       <div>
-                        {/* Category eyebrow in teal */}
-                        <div className="text-[11px] sm:text-xs font-mono font-bold tracking-widest text-[#2DD4BF] uppercase mb-2">
+                        {/* Category eyebrow in blue */}
+                        <div className="text-[11px] sm:text-xs font-mono font-bold tracking-widest text-blue-400 uppercase mb-2">
                           {project.category}
                         </div>
 
@@ -530,11 +530,11 @@ const ProjectsBuiltForRealWorld = () => {
                           {project.subtitle}
                         </p>
 
-                        {/* 3 Concise Feature Highlights with Teal Dot Indicator */}
+                        {/* 3 Concise Feature Highlights with Blue Dot Indicator */}
                         <ul className="space-y-3.5">
                           {project.highlights.map((highlight, hIdx) => (
                             <li key={hIdx} className="flex items-start gap-3 text-xs sm:text-sm text-[#CBD5E1] leading-relaxed">
-                              <span className="mt-1.5 w-2 h-2 rounded-full bg-[#2DD4BF] shrink-0" />
+                              <span className="mt-1.5 w-2 h-2 rounded-full bg-blue-500 shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
                               <span>{highlight}</span>
                             </li>
                           ))}
@@ -553,14 +553,14 @@ const ProjectsBuiltForRealWorld = () => {
                           </div>
                         </div>
 
-                        {/* Two Clear Minimal Links matching Reference Image */}
+                        {/* Two Clear Minimal Links matching Blue Concept */}
                         <div className="flex flex-wrap items-center gap-3">
                           {project.liveUrl ? (
                             <a
                               href={project.liveUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#2DD4BF] hover:bg-[#14B8A6] text-[#07090E] font-semibold text-xs sm:text-sm transition-all duration-200 active:scale-95 shadow-sm"
+                              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm transition-all duration-200 active:scale-95 shadow-md shadow-blue-500/20"
                             >
                               <span>View live product</span>
                               <HiArrowUpRight className="w-4 h-4 stroke-2" />
@@ -570,7 +570,7 @@ const ProjectsBuiltForRealWorld = () => {
                               href={project.repoUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#2DD4BF] hover:bg-[#14B8A6] text-[#07090E] font-semibold text-xs sm:text-sm transition-all duration-200 active:scale-95 shadow-sm"
+                              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm transition-all duration-200 active:scale-95 shadow-md shadow-blue-500/20"
                             >
                               <span>View repository</span>
                               <HiArrowUpRight className="w-4 h-4 stroke-2" />

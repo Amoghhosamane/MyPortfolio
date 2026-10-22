@@ -870,16 +870,18 @@ const Contact = () => {
     }
   };
 
+  const [showCalendly, setShowCalendly] = useState(false);
+
   return (
-    <section id="contact" className="px-xl pt-[10vh] pb-[10vh] bg-[#0A0A0A]">
+    <section id="contact" className="px-xl pt-[10vh] pb-[10vh] bg-[#07090E]">
       <style>{`
         #contact input, #contact textarea {
           color: #ffffff !important;
-          background-color: rgba(255, 255, 255, 0.08) !important;
+          background-color: rgba(255, 255, 255, 0.05) !important;
         }
         #contact input:focus, #contact textarea:focus {
-          background-color: rgba(255, 255, 255, 0.12) !important;
-          border-color: #2dd4bf !important;
+          background-color: rgba(255, 255, 255, 0.08) !important;
+          border-color: #3b82f6 !important;
           outline: none !important;
         }
         #contact input::placeholder, #contact textarea::placeholder {
@@ -892,63 +894,191 @@ const Contact = () => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 1.0 }}
       >
-        <h2 id="contact-title" className="text-5xl section-title pb-5 mb-10 max-md:text-3xl text-white">Get In Touch — Let's Build Something Amazing</h2>
-
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12">
-          <div className="contact-info p-8 rounded-2xl bg-[#111111] border border-white/10 shadow-2xl">
-            <h3 className="text-2xl font-bold mb-6 text-white">Contact Details</h3>
-            <p className="text-white/70 mb-8 leading-relaxed">Whether you're interested in collaboration, have a project in mind, or just want to connect, I'm always open to new opportunities.</p>
-
-            <div className="space-y-6 text-white/80">
-              <div className="flex flex-col gap-1 text-white">
-                <strong className="text-teal-400 text-sm uppercase tracking-wider">Email</strong>
-                <div className="text-lg">amoghvarsh9614@gmail.com</div>
-              </div>
-            </div>
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10">
+            <span className="text-xs font-mono font-bold tracking-widest text-blue-400 uppercase">
+              GET IN TOUCH
+            </span>
+            <h2 id="contact-title" className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mt-2">
+              Let's Build Something Amazing
+            </h2>
+            <p className="text-white/60 text-sm sm:text-base mt-2 max-w-2xl">
+              Schedule a 1-on-1 strategy call or drop a direct message below.
+            </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="contact-form p-8 rounded-2xl bg-[#111111] border border-white/10 shadow-2xl" aria-label="Send message form">
-            <h3 className="text-2xl font-bold mb-6 text-white">Send Me a Message</h3>
-            <div className="flex flex-col gap-5">
-              <input
-                className="w-full px-5 py-4 rounded-xl border border-white/10 transition-all font-medium text-lg"
-                placeholder="Your Name"
-                value={name}
-                onChange={e => setName(e.target.value)}
-              />
-              <input
-                type="email"
-                className="w-full px-5 py-4 rounded-xl border border-white/10 transition-all font-medium text-lg"
-                placeholder="Email Address"
-                value={emailAddr}
-                onChange={e => setEmailAddr(e.target.value)}
-              />
-              <textarea
-                className="w-full px-5 py-4 rounded-xl border border-white/10 transition-all font-medium text-lg min-h-[180px] resize-none"
-                placeholder="Reason to Contact"
-                value={reason}
-                onChange={e => setReason(e.target.value)}
-              />
-              {/* Honeypot field (hidden) to catch bots */}
-              <input type="text" name="_hp" value={_hp} onChange={e => setHp(e.target.value)} className="hidden" aria-hidden="true" />
-
-              <div className="flex items-center gap-6 mt-4">
-                <button
-                  type="submit"
-                  disabled={sending}
-                  className="px-8 py-4 rounded-xl bg-teal-600 text-white font-bold hover:bg-teal-500 hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-60 shadow-lg shadow-teal-500/20"
-                >
-                  {sending ? 'Sending...' : 'Send Message'}
-                </button>
-                {statusMsg ? (
-                  <div className={`text-base font-medium ${statusMsg.type === 'error' ? 'text-rose-400' : 'text-emerald-400'}`}>
-                    {statusMsg.text}
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1.8fr] gap-8 lg:gap-12 items-start">
+            {/* LEFT COLUMN: Contact Details & Calendly Quick Book Card */}
+            <div className="space-y-6">
+              {/* Calendly Booking Card */}
+              <div className="p-6 sm:p-7 rounded-2xl bg-[#0B0F17] border border-[#1E293B] shadow-2xl relative overflow-hidden group hover:border-blue-500/50 transition-all duration-300">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                        <line x1="16" x2="16" y1="2" y2="6"/>
+                        <line x1="8" x2="8" y1="2" y2="6"/>
+                        <line x1="3" x2="21" y1="10" y2="10"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-bold text-lg">Schedule a Meeting</h4>
+                      <span className="text-xs text-blue-400 font-mono">30-Min Strategy Call</span>
+                    </div>
                   </div>
-                ) : null}
+                  <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                    Active
+                  </span>
+                </div>
+
+                <p className="text-xs sm:text-sm text-white/70 mb-5 leading-relaxed">
+                  Fastest way to connect. Pick a convenient time on my calendar for project discussion or architecture consultation.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setShowCalendly(true)}
+                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-blue-500/20 active:scale-95"
+                  >
+                    <span>Book 30-Min Call</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M7 17L17 7"/>
+                      <path d="M7 7h10v10"/>
+                    </svg>
+                  </button>
+
+                  <a
+                    href="https://calendly.com/amoghvarsh9614/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-white/80 hover:text-white text-xs sm:text-sm border border-white/10 transition-all font-medium"
+                  >
+                    <span>Open in Calendly</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Direct Info */}
+              <div className="p-6 rounded-2xl bg-[#0B0F17] border border-[#1E293B] shadow-xl space-y-4">
+                <h4 className="text-white font-bold text-sm uppercase tracking-wider text-white/60">Direct Inquiries</h4>
+                <div>
+                  <span className="text-xs text-blue-400 font-mono uppercase">Email Address</span>
+                  <div className="text-white font-medium text-base mt-0.5">amoghvarsh9614@gmail.com</div>
+                </div>
+                <div>
+                  <span className="text-xs text-blue-400 font-mono uppercase">Response Time</span>
+                  <div className="text-white/70 text-xs mt-0.5">Usually replies within 12-24 hours</div>
+                </div>
               </div>
             </div>
-          </form>
+
+            {/* RIGHT COLUMN: Contact Form */}
+            <form onSubmit={handleSubmit} className="contact-form p-6 sm:p-8 rounded-2xl bg-[#0B0F17] border border-[#1E293B] shadow-2xl space-y-5" aria-label="Send message form">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Send a Message</h3>
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-xs font-mono uppercase tracking-wider text-white/60 mb-1.5">Your Name</label>
+                  <input
+                    className="w-full px-4 py-3 rounded-xl border border-white/10 transition-all font-medium text-sm sm:text-base"
+                    placeholder="Amogh Hosamane"
+                    value={name}
+                    onChange={e => setName(e.target.value)}
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-mono uppercase tracking-wider text-white/60 mb-1.5">Email Address</label>
+                  <input
+                    type="email"
+                    className="w-full px-4 py-3 rounded-xl border border-white/10 transition-all font-medium text-sm sm:text-base"
+                    placeholder="you@domain.com"
+                    value={emailAddr}
+                    onChange={e => setEmailAddr(e.target.value)}
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-mono uppercase tracking-wider text-white/60 mb-1.5">Message / Project Scope</label>
+                  <textarea
+                    className="w-full px-4 py-3 rounded-xl border border-white/10 transition-all font-medium text-sm sm:text-base min-h-[140px] resize-none"
+                    placeholder="Tell me about your project, idea, or questions..."
+                    value={reason}
+                    onChange={e => setReason(e.target.value)}
+                  />
+                </div>
+
+                {/* Honeypot field (hidden) to catch bots */}
+                <input type="text" name="_hp" value={_hp} onChange={e => setHp(e.target.value)} className="hidden" aria-hidden="true" />
+
+                <div className="flex flex-wrap items-center gap-4 pt-2">
+                  <button
+                    type="submit"
+                    disabled={sending}
+                    className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition-all disabled:opacity-60 shadow-lg shadow-blue-500/25 active:scale-95"
+                  >
+                    {sending ? 'Sending...' : 'Send Message'}
+                  </button>
+                  {statusMsg ? (
+                    <div className={`text-sm font-medium ${statusMsg.type === 'error' ? 'text-rose-400' : 'text-blue-400'}`}>
+                      {statusMsg.text}
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
+
+        {/* Calendly Interactive Popup Modal */}
+        <AnimatePresence>
+          {showCalendly && (
+            <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setShowCalendly(false)}
+                className="fixed inset-0 bg-black/80 backdrop-blur-sm"
+              />
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 15 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 15 }}
+                transition={{ duration: 0.2 }}
+                className="relative w-full max-w-4xl h-[85vh] bg-[#0E1522] border border-[#1E293B] rounded-2xl overflow-hidden shadow-2xl z-10 flex flex-col"
+              >
+                {/* Modal Header */}
+                <div className="px-6 py-3 bg-[#07090E] border-b border-[#1E293B] flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse"></span>
+                    <span className="text-xs font-mono text-white/80">calendly.com/amoghvarsh9614/30min</span>
+                  </div>
+                  <button
+                    onClick={() => setShowCalendly(false)}
+                    className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition"
+                    aria-label="Close booking modal"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="18" y1="6" x2="6" y2="18"/>
+                      <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                  </button>
+                </div>
+
+                {/* Calendly Embedded Iframe */}
+                <div className="flex-1 w-full h-full bg-[#07090E]">
+                  <iframe
+                    src="https://calendly.com/amoghvarsh9614/30min?hide_landing_page_details=1&hide_gdpr_banner=1"
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    title="Calendly 30 Minute Meeting"
+                  />
+                </div>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
       </motion.div>
     </section>
   );
