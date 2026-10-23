@@ -10,6 +10,10 @@ import breakthroughImg from '../assets/breakthrough-med.png';
 import skillorbitImg from '../assets/skillorbit.png';
 import { FaGithub, FaArrowLeft, FaArrowRight, FaArrowUp } from 'react-icons/fa';
 import { HiArrowUpRight } from 'react-icons/hi2';
+import { HiOutlineArrowRight, HiOutlineEnvelope } from 'react-icons/hi2';
+import { LuBrain, LuServer, LuFlaskConical, LuRocket } from 'react-icons/lu';
+import CursorGrid from './CursorGrid';
+import SpecularButton from './SpecularButton';
 
 // Custom styles for the dark editorial background
 const customHomeStyles = `
@@ -17,7 +21,7 @@ const customHomeStyles = `
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 60% 45% at 50% 35%, rgba(14, 42, 90, 0.18), transparent 75%), #07090E;
+    background: radial-gradient(ellipse 60% 45% at 50% 35%, rgba(255, 255, 255, 0.03), transparent 75%), #121212;
     z-index: -1;
   }
 `;
@@ -612,59 +616,176 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="hero-section px-xl pt-[12vh] lg:pt-[15vh] pb-[10vh] relative" id="home">
+    <section className="hero-section px-xl pt-20 sm:pt-24 lg:pt-24 pb-[10vh] relative" id="home">
       <style>{customHomeStyles}</style>
 
-      {/* HERO SECTION (Initial Load Animation) */}
-      <Transition
-        show={isShowing}
-        appear={true}
-        enter="transition-all duration-1000 ease-out"
-        enterFrom="opacity-0 translate-y-10 scale-90"
-        enterTo="opacity-100 translate-y-0 scale-100"
-      >
-        <div className="home-hero-content-wrapper mb-16 relative flex flex-col-reverse lg:flex-row items-center gap-8">
-          {/* --- LEFT: Text --- */}
-          <div className="flex-1">
-            <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] font-semibold leading-snug max-w-[70%] max-lg:max-w-full mb-6">
-              I'm <span className="accent-text font-bold">Amogh Hosamane</span>,{' '}
-              <span className="accent-text inline-block min-w-[180px]">
-                <Typewriter
-                  words={['Software Architect.', 'Backend Developer.', 'AI/ML engineer.']}
-                  loop={0}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1500}
-                />
-              </span>
-            </h1>
-            <p className="text-[1.1rem] sm:text-[1.2rem] md:text-[1.25rem] text-white/70 max-w-2xl max-lg:max-w-full">
-              A Software Architect passionate about designing scalable and efficient software systems. I build robust backend solutions and explore AI/ML concepts to create intelligent, high-performance applications. I thrive on collaborating with teams and turning innovative ideas into impactful projects, while continuously learning and evolving in the tech world.
-            </p>
-          </div>
+      {/* HERO SECTION with Interactive CursorGrid (Monochrome / White Grid Design) */}
+      <div className="relative -mx-4 sm:-mx-8 lg:-mx-16 xl:-mx-32 rounded-3xl overflow-hidden mb-16 border border-white/10 shadow-[0_25px_70px_rgba(0,0,0,0.85)] bg-dark">
+        <CursorGrid
+          cellSize={52}
+          color="#ffffff"
+          gridColor="#2a2a2a"
+          highlight="area"
+          gridStyle="lines"
+          radius={180}
+          holdTime={400}
+          fadeDuration={800}
+          fillOpacity={0.06}
+          gridOpacity={0.2}
+          spotlight={0.65}
+          lineWidth={1}
+          clickPulse={true}
+          pulseSpeed={600}
+          ambient={0.12}
+          edgeFade={0.2}
+          intro={true}
+          style={{ width: '100%' }}
+        >
+          <div className="px-6 sm:px-10 lg:px-16 xl:px-24 pt-14 pb-10 lg:pt-20 lg:pb-12">
+            <div>
+              {/* Main Hero Row: Left Copy & CTAs, Right Editorial Circular Cutout */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+                  {/* Left Column (7 cols) */}
+                  <div className="lg:col-span-7 flex flex-col justify-center">
+                    {/* Eyebrow / Category Tag */}
+                    <div className="flex items-center gap-2 text-[11px] sm:text-[12px] font-mono font-semibold tracking-[0.22em] text-[#94A3B8] uppercase mb-5">
+                      <span>SOFTWARE ENGINEERING</span>
+                      <span className="text-[#475569]">•</span>
+                      <span>AI SYSTEMS</span>
+                    </div>
 
-          {/* --- RIGHT: Face Image --- */}
-          <Transition
-            show={isShowing}
-            appear={true}
-            enter="transition-all duration-1200 ease-out"
-            enterFrom="opacity-0 translate-x-20 scale-75 rotate-6"
-            enterTo="opacity-100 translate-x-0 scale-100 rotate-0"
-          >
-            <div className="flex-1 relative w-full max-w-xs lg:max-w-sm mx-auto lg:mx-0">
-              <div className="absolute inset-0 rounded-full bg-white/5 backdrop-blur-md animate-pulse"></div>
-              <img
-                src={myFaceImage}
-                alt="Amogh Hosamane"
-                className="relative z-10 w-full h-auto rounded-xl shadow-xl object-cover transition-transform duration-700 ease-out"
-                style={{ maxHeight: '500px', backgroundColor: 'transparent' }}
-              />
-            </div>
-          </Transition>
-        </div>
-      </Transition>
+                    {/* Main Headline */}
+                    <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.85rem] font-bold text-white tracking-tight leading-[1.12] mb-6">
+                      I build{' '}
+                      <span className="text-[#3B82F6]">AI products</span>
+                      <br />
+                      and the systems behind them.
+                    </h1>
+
+                    {/* Subtitle / Description */}
+                    <p className="text-base sm:text-lg text-[#94A3B8] leading-relaxed max-w-xl mb-8 font-light">
+                      From LLM applications and multi-agent systems to reliable backend infrastructure, I turn technical ideas into working software.
+                    </p>
+
+                    {/* Action Buttons - Rounded Glass with Interactive Specular Light Border */}
+                    <div className="flex flex-wrap items-center gap-4">
+                      <SpecularButton
+                        href="#work"
+                        size="md"
+                        radius={9999}
+                        lineColor="#ffffff"
+                        baseColor="#ffffff"
+                        tint="#ffffff"
+                        tintOpacity={0.12}
+                        blur={16}
+                        thickness={1.3}
+                        glow={1.2}
+                        intensity={1.4}
+                        idleIntensity={0.5}
+                        shineSize={20}
+                        shineFade={45}
+                        autoAnimate={true}
+                      >
+                        <span className="font-semibold text-white tracking-wide">View projects</span>
+                        <HiOutlineArrowRight className="w-4 h-4 text-white stroke-2" />
+                      </SpecularButton>
+
+                      <SpecularButton
+                        href="#contact"
+                        size="md"
+                        radius={9999}
+                        lineColor="#ffffff"
+                        baseColor="#71717a"
+                        tint="#ffffff"
+                        tintOpacity={0.06}
+                        blur={14}
+                        thickness={1.1}
+                        glow={0.9}
+                        intensity={1.2}
+                        idleIntensity={0.35}
+                        shineSize={16}
+                        shineFade={40}
+                        autoAnimate={true}
+                      >
+                        <HiOutlineEnvelope className="w-4 h-4 text-[#cbd5e1]" />
+                        <span className="font-medium text-[#e2e8f0]">Contact</span>
+                      </SpecularButton>
+                    </div>
+                  </div>
+
+                  {/* Right Column: Editorial Circular Portrait (5 cols) */}
+                  <div className="lg:col-span-5 flex justify-center lg:justify-end">
+                    <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px]">
+                      {/* Deep dark circular backdrop container with subtle glow */}
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[#111827] to-[#0A0E17] border border-[#1E293B]/70 overflow-hidden shadow-[0_0_50px_rgba(15,23,42,0.8)]">
+                        <img
+                          src={myFaceImage}
+                          alt="Amogh Hosamane"
+                          className="w-full h-full object-cover object-top filter contrast-[1.03] brightness-[0.98] transition-transform duration-700 ease-out hover:scale-105"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bottom 4-Column Capability Badges */}
+                <div className="mt-14 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
+                  {/* Item 1: AI Engineering */}
+                  <div className="flex items-start gap-3.5">
+                    <div className="text-white shrink-0 mt-0.5">
+                      <LuBrain className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <div className="text-white text-sm font-semibold tracking-tight">AI Engineering</div>
+                      <div className="text-[#94A3B8] text-xs mt-1 leading-relaxed">
+                        LLM Apps • Multi-Agent Systems • RAG • Evaluation
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Item 2: Backend & Systems */}
+                  <div className="flex items-start gap-3.5">
+                    <div className="text-white shrink-0 mt-0.5">
+                      <LuServer className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <div className="text-white text-sm font-semibold tracking-tight">Backend & Systems</div>
+                      <div className="text-[#94A3B8] text-xs mt-1 leading-relaxed">
+                        Python • FastAPI • PostgreSQL • WebSockets • Cloud
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Item 3: Research */}
+                  <div className="flex items-start gap-3.5">
+                    <div className="text-white shrink-0 mt-0.5">
+                      <LuFlaskConical className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <div className="text-white text-sm font-semibold tracking-tight">Research</div>
+                      <div className="text-[#94A3B8] text-xs mt-1 leading-relaxed">
+                        Applied ML • Experimentation • Reproducibility
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Item 4: Product Engineering */}
+                  <div className="flex items-start gap-3.5">
+                    <div className="text-white shrink-0 mt-0.5">
+                      <LuRocket className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <div className="text-white text-sm font-semibold tracking-tight">Product Engineering</div>
+                      <div className="text-[#94A3B8] text-xs mt-1 leading-relaxed">
+                        Full-Stack • Scalable Systems • Startup Projects
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </CursorGrid>
+      </div>
 
       {/* Experience Section */}
       <AnimatedSection>

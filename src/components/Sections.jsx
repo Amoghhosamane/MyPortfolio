@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import AnimatedSection from './AnimatedSection';
 import { FaLinkedin as LinkedIn, FaGithub as GitHub, FaTwitter as X, FaRobot, FaBrain, FaGlobe, FaCode } from "react-icons/fa";
+import TechText from './TechText';
 
 // --- Placeholder Icon for Case Study Links ---
 const IconArrowRight = (props) => (
@@ -222,7 +223,7 @@ const newProjectsData = [
 // --- Work Section Component (Enhanced with framer-motion & mobile-responsive layout) ---
 const Work = () => {
   return (
-    <section id="work" className="scroll-mt-28 px-4 py-8 sm:px-6 sm:py-12 md:p-16 bg-black text-white">
+    <section id="work" className="scroll-mt-28 px-xl pt-[16vh] lg:pt-[18vh] pb-[10vh] bg-black text-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-6 sm:mb-8">
           <h2 id="work-title" className="text-3xl sm:text-4xl md:text-5xl font-extrabold pb-1 mb-2">
@@ -873,7 +874,7 @@ const Contact = () => {
   const [showCalendly, setShowCalendly] = useState(false);
 
   return (
-    <section id="contact" className="px-xl pt-[10vh] pb-[10vh] bg-[#07090E]">
+    <section id="contact" className="scroll-mt-32 px-xl pt-36 sm:pt-44 lg:pt-48 pb-28 bg-dark text-white">
       <style>{`
         #contact input, #contact textarea {
           color: #ffffff !important;
@@ -889,21 +890,52 @@ const Contact = () => {
         }
       `}</style>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 1.0 }}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
       >
         <div className="max-w-7xl mx-auto">
-          <div className="mb-10">
-            <span className="text-xs font-mono font-bold tracking-widest text-blue-400 uppercase">
-              GET IN TOUCH
-            </span>
-            <h2 id="contact-title" className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mt-2">
-              Let's Build Something Amazing
-            </h2>
-            <p className="text-white/60 text-sm sm:text-base mt-2 max-w-2xl">
-              Schedule a 1-on-1 strategy call or drop a direct message below.
+          {/* Modern Editorial Header with Interactive TechText */}
+          <div className="mb-14 pt-4">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+              <span className="text-xs font-mono font-bold tracking-[0.2em] text-blue-400 uppercase">
+                GET IN TOUCH • LET'S TALK
+              </span>
+            </div>
+
+            {/* Interactive TechText Canvas Headline */}
+            <div className="relative w-full h-[120px] sm:h-[150px] md:h-[180px] lg:h-[210px] my-2 overflow-hidden select-none">
+              <TechText
+                text="Let's Build."
+                fontWeight={700}
+                fontSize={160}
+                fontFamily="'Space Grotesk', -apple-system, sans-serif"
+                color="#FFFFFF"
+                accentColor="#3B82F6"
+                align="left"
+                reveal="letter"
+                dashLength={5}
+                dashGap={3}
+                specks={18}
+                intro="assemble"
+                introDuration={1.4}
+                clickKick={true}
+                draggable={true}
+                selection={true}
+                labels={false}
+                reach={180}
+                softness={0.7}
+                lineStyle="dashed"
+                strokeWidth={1.5}
+                speed={1}
+                bounce={0.45}
+                sweep={true}
+              />
+            </div>
+
+            <p className="text-[#94A3B8] text-sm sm:text-base font-light max-w-2xl mt-1 leading-relaxed">
+              Have an AI idea, engineering challenge, or want to collaborate? Book a 1-on-1 strategy call or drop a direct message.
             </p>
           </div>
 
@@ -911,10 +943,13 @@ const Contact = () => {
             {/* LEFT COLUMN: Contact Details & Calendly Quick Book Card */}
             <div className="space-y-6">
               {/* Calendly Booking Card */}
-              <div className="p-6 sm:p-7 rounded-2xl bg-[#0B0F17] border border-[#1E293B] shadow-2xl relative overflow-hidden group hover:border-blue-500/50 transition-all duration-300">
+              <div className="p-7 sm:p-8 rounded-3xl bg-[#090D15] border border-[#1E293B] shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden group hover:border-[#38BDF8]/40 transition-all duration-300">
+                {/* Subtle top glow line */}
+                <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#38BDF8]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400">
+                    <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-[#38BDF8]">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
                         <line x1="16" x2="16" y1="2" y2="6"/>
@@ -923,16 +958,16 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="text-white font-bold text-lg">Schedule a Meeting</h4>
-                      <span className="text-xs text-blue-400 font-mono">30-Min Strategy Call</span>
+                      <h4 className="text-white font-bold text-lg tracking-tight">Schedule a Meeting</h4>
+                      <span className="text-xs text-[#38BDF8] font-mono">30-Min Strategy Call</span>
                     </div>
                   </div>
-                  <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                  <span className="px-2.5 py-1 rounded-full text-[10px] font-mono font-semibold uppercase bg-blue-500/15 text-blue-400 border border-blue-500/30">
                     Active
                   </span>
                 </div>
 
-                <p className="text-xs sm:text-sm text-white/70 mb-5 leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#94A3B8] mb-6 leading-relaxed font-light">
                   Fastest way to connect. Pick a convenient time on my calendar for project discussion or architecture consultation.
                 </p>
 
@@ -940,7 +975,7 @@ const Contact = () => {
                   <button
                     type="button"
                     onClick={() => setShowCalendly(true)}
-                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-blue-500/20 active:scale-95"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs sm:text-sm transition-all shadow-lg shadow-blue-500/25 active:scale-95"
                   >
                     <span>Book 30-Min Call</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -953,7 +988,7 @@ const Contact = () => {
                     href="https://calendly.com/amoghvarsh9614/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-white/80 hover:text-white text-xs sm:text-sm border border-white/10 transition-all font-medium"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#0E1522] hover:bg-[#151E2E] text-white/80 hover:text-white text-xs sm:text-sm border border-[#1E293B] hover:border-[#334155] transition-all font-medium"
                   >
                     <span>Open in Calendly</span>
                   </a>
@@ -961,46 +996,52 @@ const Contact = () => {
               </div>
 
               {/* Direct Info */}
-              <div className="p-6 rounded-2xl bg-[#0B0F17] border border-[#1E293B] shadow-xl space-y-4">
-                <h4 className="text-white font-bold text-sm uppercase tracking-wider text-white/60">Direct Inquiries</h4>
-                <div>
-                  <span className="text-xs text-blue-400 font-mono uppercase">Email Address</span>
-                  <div className="text-white font-medium text-base mt-0.5">amoghvarsh9614@gmail.com</div>
+              <div className="p-7 rounded-3xl bg-[#090D15] border border-[#1E293B] shadow-[0_15px_40px_rgba(0,0,0,0.4)] space-y-4">
+                <div className="flex items-center justify-between pb-3 border-b border-[#1E293B]">
+                  <h4 className="text-white font-semibold text-xs uppercase tracking-widest text-[#94A3B8]">Direct Inquiries</h4>
+                  <span className="text-[10px] font-mono text-[#38BDF8]">Direct Channel</span>
                 </div>
                 <div>
-                  <span className="text-xs text-blue-400 font-mono uppercase">Response Time</span>
-                  <div className="text-white/70 text-xs mt-0.5">Usually replies within 12-24 hours</div>
+                  <span className="text-[11px] text-[#64748B] font-mono uppercase tracking-wider">Email Address</span>
+                  <div className="text-white font-mono text-sm sm:text-base mt-1 font-medium select-all">amoghvarsh9614@gmail.com</div>
+                </div>
+                <div>
+                  <span className="text-[11px] text-[#64748B] font-mono uppercase tracking-wider">Response SLA</span>
+                  <div className="text-[#94A3B8] text-xs mt-1">Usually replies within 12-24 hours</div>
                 </div>
               </div>
             </div>
 
             {/* RIGHT COLUMN: Contact Form */}
-            <form onSubmit={handleSubmit} className="contact-form p-6 sm:p-8 rounded-2xl bg-[#0B0F17] border border-[#1E293B] shadow-2xl space-y-5" aria-label="Send message form">
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Send a Message</h3>
-              <div className="space-y-4">
+            <form onSubmit={handleSubmit} className="contact-form p-7 sm:p-9 rounded-3xl bg-[#090D15] border border-[#1E293B] shadow-[0_20px_50px_rgba(0,0,0,0.5)] space-y-6" aria-label="Send message form">
+              <div className="flex items-center justify-between pb-4 border-b border-[#1E293B]">
+                <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">Send a Message</h3>
+                <span className="text-[10px] font-mono text-[#64748B] uppercase tracking-wider">Encrypted Form</span>
+              </div>
+              <div className="space-y-5">
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-white/60 mb-1.5">Your Name</label>
+                  <label className="block text-xs font-mono uppercase tracking-wider text-[#94A3B8] mb-2 font-medium">Your Name</label>
                   <input
-                    className="w-full px-4 py-3 rounded-xl border border-white/10 transition-all font-medium text-sm sm:text-base"
-                    placeholder="Amogh Hosamane"
+                    className="w-full px-4 py-3.5 rounded-xl border border-[#1E293B] bg-[#07090E] transition-all font-medium text-sm sm:text-base placeholder:text-[#475569] focus:border-[#38BDF8] focus:ring-1 focus:ring-[#38BDF8]"
+                    placeholder="e.g. Amogh Hosamane"
                     value={name}
                     onChange={e => setName(e.target.value)}
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-white/60 mb-1.5">Email Address</label>
+                  <label className="block text-xs font-mono uppercase tracking-wider text-[#94A3B8] mb-2 font-medium">Email Address</label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 rounded-xl border border-white/10 transition-all font-medium text-sm sm:text-base"
+                    className="w-full px-4 py-3.5 rounded-xl border border-[#1E293B] bg-[#07090E] transition-all font-medium text-sm sm:text-base placeholder:text-[#475569] focus:border-[#38BDF8] focus:ring-1 focus:ring-[#38BDF8]"
                     placeholder="you@domain.com"
                     value={emailAddr}
                     onChange={e => setEmailAddr(e.target.value)}
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-mono uppercase tracking-wider text-white/60 mb-1.5">Message / Project Scope</label>
+                  <label className="block text-xs font-mono uppercase tracking-wider text-[#94A3B8] mb-2 font-medium">Message / Project Scope</label>
                   <textarea
-                    className="w-full px-4 py-3 rounded-xl border border-white/10 transition-all font-medium text-sm sm:text-base min-h-[140px] resize-none"
+                    className="w-full px-4 py-3.5 rounded-xl border border-[#1E293B] bg-[#07090E] transition-all font-medium text-sm sm:text-base min-h-[140px] resize-none placeholder:text-[#475569] focus:border-[#38BDF8] focus:ring-1 focus:ring-[#38BDF8]"
                     placeholder="Tell me about your project, idea, or questions..."
                     value={reason}
                     onChange={e => setReason(e.target.value)}
@@ -1010,11 +1051,11 @@ const Contact = () => {
                 {/* Honeypot field (hidden) to catch bots */}
                 <input type="text" name="_hp" value={_hp} onChange={e => setHp(e.target.value)} className="hidden" aria-hidden="true" />
 
-                <div className="flex flex-wrap items-center gap-4 pt-2">
+                <div className="flex flex-wrap items-center gap-4 pt-3">
                   <button
                     type="submit"
                     disabled={sending}
-                    className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition-all disabled:opacity-60 shadow-lg shadow-blue-500/25 active:scale-95"
+                    className="px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-all disabled:opacity-60 shadow-lg shadow-blue-500/25 active:scale-95"
                   >
                     {sending ? 'Sending...' : 'Send Message'}
                   </button>

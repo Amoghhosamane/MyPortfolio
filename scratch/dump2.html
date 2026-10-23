@@ -1,0 +1,2958 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amogh Hosamane - Digital Portfolio</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet">
+  <style type="text/css">.styles-module_blinkingCursor__yugAC{color:inherit;font:inherit;left:3px;line-height:inherit;opacity:1;position:relative;top:0}.styles-module_blinking__9VXRT{animation-duration:.8s;animation-iteration-count:infinite;animation-name:styles-module_blink__rqfaf}@keyframes styles-module_blink__rqfaf{0%{opacity:1}to{opacity:0}}</style><style type="text/css" data-vite-dev-id="D:/PROJECT/MyPortfolio/src/components/CursorGrid.css">.cursor-grid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #07090e;
+}
+
+.cursor-grid__canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.cursor-grid__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+</style><style type="text/css" data-vite-dev-id="D:/PROJECT/MyPortfolio/src/components/TechText.css">.tech-text {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.tech-text-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+</style><style type="text/css" data-vite-dev-id="D:/PROJECT/MyPortfolio/src/index.css">/* src/index.css */
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+/* ! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com *//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: Space Grotesk, sans-serif; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+  html,
+  body {
+    background-color: #07090e;
+    color: #f8fafc;
+    margin: 0;
+    padding: 0;
+  }
+.\!container {
+  width: 100% !important;
+}
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .\!container {
+    max-width: 640px !important;
+  }
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .\!container {
+    max-width: 768px !important;
+  }
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .\!container {
+    max-width: 1024px !important;
+  }
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .\!container {
+    max-width: 1280px !important;
+  }
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .\!container {
+    max-width: 1536px !important;
+  }
+  .container {
+    max-width: 1536px;
+  }
+}
+.pointer-events-none {
+  pointer-events: none;
+}
+.\!visible {
+  visibility: visible !important;
+}
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.inset-0 {
+  inset: 0px;
+}
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+.-left-\[3\.45rem\] {
+  left: -3.45rem;
+}
+.bottom-0 {
+  bottom: 0px;
+}
+.bottom-6 {
+  bottom: 1.5rem;
+}
+.left-0 {
+  left: 0px;
+}
+.left-1 {
+  left: 0.25rem;
+}
+.right-0 {
+  right: 0px;
+}
+.right-6 {
+  right: 1.5rem;
+}
+.top-0 {
+  top: 0px;
+}
+.top-1 {
+  top: 0.25rem;
+}
+.top-14 {
+  top: 3.5rem;
+}
+.top-8 {
+  top: 2rem;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-30 {
+  z-index: 30;
+}
+.z-40 {
+  z-index: 40;
+}
+.z-50 {
+  z-index: 50;
+}
+.z-\[100\] {
+  z-index: 100;
+}
+.z-\[200\] {
+  z-index: 200;
+}
+.z-\[9999\] {
+  z-index: 9999;
+}
+.-mx-4 {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mb-1\.5 {
+  margin-bottom: 0.375rem;
+}
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+.mb-12 {
+  margin-bottom: 3rem;
+}
+.mb-16 {
+  margin-bottom: 4rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.ml-0\.5 {
+  margin-left: 0.125rem;
+}
+.ml-2 {
+  margin-left: 0.5rem;
+}
+.ml-6 {
+  margin-left: 1.5rem;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mr-1 {
+  margin-right: 0.25rem;
+}
+.mr-1\.5 {
+  margin-right: 0.375rem;
+}
+.mr-2 {
+  margin-right: 0.5rem;
+}
+.mt-0\.5 {
+  margin-top: 0.125rem;
+}
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.mt-1\.5 {
+  margin-top: 0.375rem;
+}
+.mt-10 {
+  margin-top: 2.5rem;
+}
+.mt-14 {
+  margin-top: 3.5rem;
+}
+.mt-16 {
+  margin-top: 4rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.mt-20 {
+  margin-top: 5rem;
+}
+.mt-3 {
+  margin-top: 0.75rem;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
+.mt-6 {
+  margin-top: 1.5rem;
+}
+.mt-8 {
+  margin-top: 2rem;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.flex {
+  display: flex;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.grid {
+  display: grid;
+}
+.hidden {
+  display: none;
+}
+.h-0\.5 {
+  height: 0.125rem;
+}
+.h-1\.5 {
+  height: 0.375rem;
+}
+.h-10 {
+  height: 2.5rem;
+}
+.h-12 {
+  height: 3rem;
+}
+.h-14 {
+  height: 3.5rem;
+}
+.h-16 {
+  height: 4rem;
+}
+.h-2 {
+  height: 0.5rem;
+}
+.h-2\.5 {
+  height: 0.625rem;
+}
+.h-3 {
+  height: 0.75rem;
+}
+.h-3\.5 {
+  height: 0.875rem;
+}
+.h-4 {
+  height: 1rem;
+}
+.h-5 {
+  height: 1.25rem;
+}
+.h-6 {
+  height: 1.5rem;
+}
+.h-64 {
+  height: 16rem;
+}
+.h-7 {
+  height: 1.75rem;
+}
+.h-8 {
+  height: 2rem;
+}
+.h-\[120px\] {
+  height: 120px;
+}
+.h-\[1px\] {
+  height: 1px;
+}
+.h-\[85vh\] {
+  height: 85vh;
+}
+.h-full {
+  height: 100%;
+}
+.max-h-\[90vh\] {
+  max-height: 90vh;
+}
+.min-h-\[140px\] {
+  min-height: 140px;
+}
+.min-h-\[300px\] {
+  min-height: 300px;
+}
+.min-h-\[400px\] {
+  min-height: 400px;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+.w-0 {
+  width: 0px;
+}
+.w-1 {
+  width: 0.25rem;
+}
+.w-1\.5 {
+  width: 0.375rem;
+}
+.w-10 {
+  width: 2.5rem;
+}
+.w-12 {
+  width: 3rem;
+}
+.w-14 {
+  width: 3.5rem;
+}
+.w-16 {
+  width: 4rem;
+}
+.w-2 {
+  width: 0.5rem;
+}
+.w-2\.5 {
+  width: 0.625rem;
+}
+.w-3 {
+  width: 0.75rem;
+}
+.w-3\.5 {
+  width: 0.875rem;
+}
+.w-4 {
+  width: 1rem;
+}
+.w-5 {
+  width: 1.25rem;
+}
+.w-56 {
+  width: 14rem;
+}
+.w-6 {
+  width: 1.5rem;
+}
+.w-64 {
+  width: 16rem;
+}
+.w-7 {
+  width: 1.75rem;
+}
+.w-8 {
+  width: 2rem;
+}
+.w-\[72\%\] {
+  width: 72%;
+}
+.w-\[85\%\] {
+  width: 85%;
+}
+.w-full {
+  width: 100%;
+}
+.w-px {
+  width: 1px;
+}
+.min-w-0 {
+  min-width: 0px;
+}
+.max-w-2xl {
+  max-width: 42rem;
+}
+.max-w-4xl {
+  max-width: 56rem;
+}
+.max-w-7xl {
+  max-width: 80rem;
+}
+.max-w-\[220px\] {
+  max-width: 220px;
+}
+.max-w-lg {
+  max-width: 32rem;
+}
+.max-w-sm {
+  max-width: 24rem;
+}
+.max-w-xl {
+  max-width: 36rem;
+}
+.flex-1 {
+  flex: 1 1 0%;
+}
+.shrink-0 {
+  flex-shrink: 0;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.grow {
+  flex-grow: 1;
+}
+.-translate-x-4 {
+  --tw-translate-x: -1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-y-full {
+  --tw-translate-y: -100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-x-0 {
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-x-6 {
+  --tw-translate-x: 1.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-x-full {
+  --tw-translate-x: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-y-0 {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-y-8 {
+  --tw-translate-y: 2rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+.cursor-grab {
+  cursor: grab;
+}
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.select-all {
+  -webkit-user-select: all;
+     -moz-user-select: all;
+          user-select: all;
+}
+.resize-none {
+  resize: none;
+}
+.resize {
+  resize: both;
+}
+.scroll-mt-24 {
+  scroll-margin-top: 6rem;
+}
+.scroll-mt-28 {
+  scroll-margin-top: 7rem;
+}
+.list-disc {
+  list-style-type: disc;
+}
+.list-none {
+  list-style-type: none;
+}
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-center {
+  align-items: center;
+}
+.items-stretch {
+  align-items: stretch;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-0\.5 {
+  gap: 0.125rem;
+}
+.gap-1 {
+  gap: 0.25rem;
+}
+.gap-1\.5 {
+  gap: 0.375rem;
+}
+.gap-10 {
+  gap: 2.5rem;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+.gap-2\.5 {
+  gap: 0.625rem;
+}
+.gap-3 {
+  gap: 0.75rem;
+}
+.gap-3\.5 {
+  gap: 0.875rem;
+}
+.gap-4 {
+  gap: 1rem;
+}
+.gap-5 {
+  gap: 1.25rem;
+}
+.gap-6 {
+  gap: 1.5rem;
+}
+.gap-8 {
+  gap: 2rem;
+}
+.gap-x-10 {
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+}
+.gap-y-12 {
+  row-gap: 3rem;
+}
+.space-y-0\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.125rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.125rem * var(--tw-space-y-reverse));
+}
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+.space-y-1\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.375rem * var(--tw-space-y-reverse));
+}
+.space-y-12 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.space-y-2\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.625rem * var(--tw-space-y-reverse));
+}
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+.space-y-3\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.875rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.875rem * var(--tw-space-y-reverse));
+}
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+.self-start {
+  align-self: flex-start;
+}
+.self-stretch {
+  align-self: stretch;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.overflow-y-auto {
+  overflow-y: auto;
+}
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.rounded-2xl {
+  border-radius: 1rem;
+}
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+.rounded-\[30px\] {
+  border-radius: 30px;
+}
+.rounded-full {
+  border-radius: 9999px;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+.rounded-md {
+  border-radius: 0.375rem;
+}
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+.rounded-b-xl {
+  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+.rounded-t-3xl {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+.border {
+  border-width: 1px;
+}
+.border-2 {
+  border-width: 2px;
+}
+.border-b {
+  border-bottom-width: 1px;
+}
+.border-l {
+  border-left-width: 1px;
+}
+.border-l-2 {
+  border-left-width: 2px;
+}
+.border-l-4 {
+  border-left-width: 4px;
+}
+.border-r {
+  border-right-width: 1px;
+}
+.border-t {
+  border-top-width: 1px;
+}
+.border-\[\#0D9488\]\/50 {
+  border-color: rgb(13 148 136 / 0.5);
+}
+.border-\[\#1E293B\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(30 41 59 / var(--tw-border-opacity, 1));
+}
+.border-\[\#1E293B\]\/60 {
+  border-color: rgb(30 41 59 / 0.6);
+}
+.border-\[\#1E293B\]\/70 {
+  border-color: rgb(30 41 59 / 0.7);
+}
+.border-\[\#2563EB\]\/30 {
+  border-color: rgb(37 99 235 / 0.3);
+}
+.border-\[\#2563EB\]\/40 {
+  border-color: rgb(37 99 235 / 0.4);
+}
+.border-\[\#334155\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(51 65 85 / var(--tw-border-opacity, 1));
+}
+.border-\[\#38BDF8\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(56 189 248 / var(--tw-border-opacity, 1));
+}
+.border-\[\#38BDF8\]\/40 {
+  border-color: rgb(56 189 248 / 0.4);
+}
+.border-accent\/20 {
+  border-color: rgb(0 123 255 / 0.2);
+}
+.border-blue-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(96 165 250 / var(--tw-border-opacity, 1));
+}
+.border-blue-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity, 1));
+}
+.border-blue-500\/30 {
+  border-color: rgb(59 130 246 / 0.3);
+}
+.border-cyan-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(34 211 238 / var(--tw-border-opacity, 1));
+}
+.border-cyan-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(6 182 212 / var(--tw-border-opacity, 1));
+}
+.border-emerald-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(52 211 153 / var(--tw-border-opacity, 1));
+}
+.border-emerald-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(16 185 129 / var(--tw-border-opacity, 1));
+}
+.border-emerald-500\/40 {
+  border-color: rgb(16 185 129 / 0.4);
+}
+.border-gray-800 {
+  --tw-border-opacity: 1;
+  border-color: rgb(31 41 55 / var(--tw-border-opacity, 1));
+}
+.border-green-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(34 197 94 / var(--tw-border-opacity, 1));
+}
+.border-orange-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(251 146 60 / var(--tw-border-opacity, 1));
+}
+.border-pink-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(244 114 182 / var(--tw-border-opacity, 1));
+}
+.border-pink-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(236 72 153 / var(--tw-border-opacity, 1));
+}
+.border-purple-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(192 132 252 / var(--tw-border-opacity, 1));
+}
+.border-red-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 113 113 / var(--tw-border-opacity, 1));
+}
+.border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity, 1));
+}
+.border-red-500\/30 {
+  border-color: rgb(239 68 68 / 0.3);
+}
+.border-red-500\/40 {
+  border-color: rgb(239 68 68 / 0.4);
+}
+.border-teal-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(45 212 191 / var(--tw-border-opacity, 1));
+}
+.border-teal-500\/20 {
+  border-color: rgb(20 184 166 / 0.2);
+}
+.border-teal-500\/30 {
+  border-color: rgb(20 184 166 / 0.3);
+}
+.border-teal-500\/50 {
+  border-color: rgb(20 184 166 / 0.5);
+}
+.border-white\/10 {
+  border-color: rgb(255 255 255 / 0.1);
+}
+.border-white\/15 {
+  border-color: rgb(255 255 255 / 0.15);
+}
+.border-white\/20 {
+  border-color: rgb(255 255 255 / 0.2);
+}
+.border-white\/5 {
+  border-color: rgb(255 255 255 / 0.05);
+}
+.border-white\/50 {
+  border-color: rgb(255 255 255 / 0.5);
+}
+.border-yellow-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(250 204 21 / var(--tw-border-opacity, 1));
+}
+.border-yellow-500\/30 {
+  border-color: rgb(234 179 8 / 0.3);
+}
+.bg-\[\#0284C7\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 132 199 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#07090E\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(7 9 14 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#07090e\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(7 9 14 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#070A10\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(7 10 16 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#090D14\]\/90 {
+  background-color: rgb(9 13 20 / 0.9);
+}
+.bg-\[\#090D15\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(9 13 21 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#0A101D\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 16 29 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#0B0F17\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(11 15 23 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#0C111C\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(12 17 28 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#0D9488\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(13 148 136 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#0D9488\]\/30 {
+  background-color: rgb(13 148 136 / 0.3);
+}
+.bg-\[\#0E1522\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 21 34 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#10B981\]\/80 {
+  background-color: rgb(16 185 129 / 0.8);
+}
+.bg-\[\#151E2E\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 30 46 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#1E293B\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#1E3A8A\]\/50 {
+  background-color: rgb(30 58 138 / 0.5);
+}
+.bg-\[\#2563EB\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#2DD4BF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(45 212 191 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#3B82F6\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#E11D48\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(225 29 72 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#EF4444\]\/80 {
+  background-color: rgb(239 68 68 / 0.8);
+}
+.bg-\[\#F59E0B\]\/80 {
+  background-color: rgb(245 158 11 / 0.8);
+}
+.bg-accent {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 123 255 / var(--tw-bg-opacity, 1));
+}
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+.bg-black\/50 {
+  background-color: rgb(0 0 0 / 0.5);
+}
+.bg-black\/60 {
+  background-color: rgb(0 0 0 / 0.6);
+}
+.bg-black\/70 {
+  background-color: rgb(0 0 0 / 0.7);
+}
+.bg-black\/80 {
+  background-color: rgb(0 0 0 / 0.8);
+}
+.bg-black\/90 {
+  background-color: rgb(0 0 0 / 0.9);
+}
+.bg-blue-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity, 1));
+}
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
+}
+.bg-blue-500\/10 {
+  background-color: rgb(59 130 246 / 0.1);
+}
+.bg-blue-500\/15 {
+  background-color: rgb(59 130 246 / 0.15);
+}
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+}
+.bg-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 18 18 / var(--tw-bg-opacity, 1));
+}
+.bg-dark\/70 {
+  background-color: rgb(18 18 18 / 0.7);
+}
+.bg-dark\/95 {
+  background-color: rgb(18 18 18 / 0.95);
+}
+.bg-emerald-500\/20 {
+  background-color: rgb(16 185 129 / 0.2);
+}
+.bg-emerald-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(5 150 105 / var(--tw-bg-opacity, 1));
+}
+.bg-emerald-900\/80 {
+  background-color: rgb(6 78 59 / 0.8);
+}
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+}
+.bg-red-500\/10 {
+  background-color: rgb(239 68 68 / 0.1);
+}
+.bg-red-500\/20 {
+  background-color: rgb(239 68 68 / 0.2);
+}
+.bg-red-900\/80 {
+  background-color: rgb(127 29 29 / 0.8);
+}
+.bg-teal-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(45 212 191 / var(--tw-bg-opacity, 1));
+}
+.bg-teal-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 184 166 / var(--tw-bg-opacity, 1));
+}
+.bg-teal-500\/10 {
+  background-color: rgb(20 184 166 / 0.1);
+}
+.bg-teal-500\/15 {
+  background-color: rgb(20 184 166 / 0.15);
+}
+.bg-teal-500\/20 {
+  background-color: rgb(20 184 166 / 0.2);
+}
+.bg-teal-500\/5 {
+  background-color: rgb(20 184 166 / 0.05);
+}
+.bg-teal-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(13 148 136 / var(--tw-bg-opacity, 1));
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+.bg-white\/10 {
+  background-color: rgb(255 255 255 / 0.1);
+}
+.bg-white\/15 {
+  background-color: rgb(255 255 255 / 0.15);
+}
+.bg-white\/30 {
+  background-color: rgb(255 255 255 / 0.3);
+}
+.bg-white\/5 {
+  background-color: rgb(255 255 255 / 0.05);
+}
+.bg-yellow-500\/20 {
+  background-color: rgb(234 179 8 / 0.2);
+}
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+.bg-gradient-to-t {
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+.from-\[\#090D15\]\/80 {
+  --tw-gradient-from: rgb(9 13 21 / 0.8) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(9 13 21 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.from-\[\#111827\] {
+  --tw-gradient-from: #111827 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(17 24 39 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.from-gray-900 {
+  --tw-gradient-from: #111827 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(17 24 39 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.from-transparent {
+  --tw-gradient-from: transparent var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.via-\[\#38BDF8\]\/50 {
+  --tw-gradient-to: rgb(56 189 248 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(56 189 248 / 0.5) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+.to-\[\#0A0E17\] {
+  --tw-gradient-to: #0A0E17 var(--tw-gradient-to-position);
+}
+.to-black {
+  --tw-gradient-to: #000 var(--tw-gradient-to-position);
+}
+.to-gray-800 {
+  --tw-gradient-to: #1f2937 var(--tw-gradient-to-position);
+}
+.to-transparent {
+  --tw-gradient-to: transparent var(--tw-gradient-to-position);
+}
+.stroke-2 {
+  stroke-width: 2;
+}
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.object-top {
+  -o-object-position: top;
+     object-position: top;
+}
+.p-0 {
+  padding: 0px;
+}
+.p-1 {
+  padding: 0.25rem;
+}
+.p-1\.5 {
+  padding: 0.375rem;
+}
+.p-2 {
+  padding: 0.5rem;
+}
+.p-2\.5 {
+  padding: 0.625rem;
+}
+.p-3 {
+  padding: 0.75rem;
+}
+.p-4 {
+  padding: 1rem;
+}
+.p-5 {
+  padding: 1.25rem;
+}
+.p-6 {
+  padding: 1.5rem;
+}
+.p-7 {
+  padding: 1.75rem;
+}
+.p-8 {
+  padding: 2rem;
+}
+.p-xl {
+  padding: 80px;
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.px-2\.5 {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.px-3\.5 {
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+.px-xl {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.py-0\.5 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.py-1\.5 {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.py-2\.5 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.py-3\.5 {
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+.pb-24 {
+  padding-bottom: 6rem;
+}
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+.pb-4 {
+  padding-bottom: 1rem;
+}
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+.pb-\[10vh\] {
+  padding-bottom: 10vh;
+}
+.pl-2 {
+  padding-left: 0.5rem;
+}
+.pl-4 {
+  padding-left: 1rem;
+}
+.pt-1 {
+  padding-top: 0.25rem;
+}
+.pt-10 {
+  padding-top: 2.5rem;
+}
+.pt-14 {
+  padding-top: 3.5rem;
+}
+.pt-2 {
+  padding-top: 0.5rem;
+}
+.pt-20 {
+  padding-top: 5rem;
+}
+.pt-3 {
+  padding-top: 0.75rem;
+}
+.pt-4 {
+  padding-top: 1rem;
+}
+.pt-5 {
+  padding-top: 1.25rem;
+}
+.pt-6 {
+  padding-top: 1.5rem;
+}
+.pt-8 {
+  padding-top: 2rem;
+}
+.pt-\[10vh\] {
+  padding-top: 10vh;
+}
+.pt-\[12vh\] {
+  padding-top: 12vh;
+}
+.pt-\[15vh\] {
+  padding-top: 15vh;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.font-sans {
+  font-family: Space Grotesk, sans-serif;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.text-\[10px\] {
+  font-size: 10px;
+}
+.text-\[11px\] {
+  font-size: 11px;
+}
+.text-\[12px\] {
+  font-size: 12px;
+}
+.text-\[9px\] {
+  font-size: 9px;
+}
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.text-section-title {
+  font-size: 4rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-extrabold {
+  font-weight: 800;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.leading-\[1\.12\] {
+  line-height: 1.12;
+}
+.leading-relaxed {
+  line-height: 1.625;
+}
+.leading-snug {
+  line-height: 1.375;
+}
+.tracking-\[0\.22em\] {
+  letter-spacing: 0.22em;
+}
+.tracking-\[0\.2em\] {
+  letter-spacing: 0.2em;
+}
+.tracking-\[0\.3em\] {
+  letter-spacing: 0.3em;
+}
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+.text-\[\#10B981\] {
+  --tw-text-opacity: 1;
+  color: rgb(16 185 129 / var(--tw-text-opacity, 1));
+}
+.text-\[\#2DD4BF\] {
+  --tw-text-opacity: 1;
+  color: rgb(45 212 191 / var(--tw-text-opacity, 1));
+}
+.text-\[\#334155\] {
+  --tw-text-opacity: 1;
+  color: rgb(51 65 85 / var(--tw-text-opacity, 1));
+}
+.text-\[\#38BDF8\] {
+  --tw-text-opacity: 1;
+  color: rgb(56 189 248 / var(--tw-text-opacity, 1));
+}
+.text-\[\#3B82F6\] {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity, 1));
+}
+.text-\[\#475569\] {
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity, 1));
+}
+.text-\[\#60A5FA\] {
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity, 1));
+}
+.text-\[\#64748B\] {
+  --tw-text-opacity: 1;
+  color: rgb(100 116 139 / var(--tw-text-opacity, 1));
+}
+.text-\[\#93C5FD\] {
+  --tw-text-opacity: 1;
+  color: rgb(147 197 253 / var(--tw-text-opacity, 1));
+}
+.text-\[\#94A3B8\] {
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity, 1));
+}
+.text-\[\#CBD5E1\] {
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity, 1));
+}
+.text-\[\#E2E8F0\] {
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity, 1));
+}
+.text-accent {
+  --tw-text-opacity: 1;
+  color: rgb(0 123 255 / var(--tw-text-opacity, 1));
+}
+.text-blue-400 {
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity, 1));
+}
+.text-dark {
+  --tw-text-opacity: 1;
+  color: rgb(18 18 18 / var(--tw-text-opacity, 1));
+}
+.text-emerald-200 {
+  --tw-text-opacity: 1;
+  color: rgb(167 243 208 / var(--tw-text-opacity, 1));
+}
+.text-emerald-400 {
+  --tw-text-opacity: 1;
+  color: rgb(52 211 153 / var(--tw-text-opacity, 1));
+}
+.text-light {
+  --tw-text-opacity: 1;
+  color: rgb(240 240 240 / var(--tw-text-opacity, 1));
+}
+.text-red-200 {
+  --tw-text-opacity: 1;
+  color: rgb(254 202 202 / var(--tw-text-opacity, 1));
+}
+.text-red-300 {
+  --tw-text-opacity: 1;
+  color: rgb(252 165 165 / var(--tw-text-opacity, 1));
+}
+.text-red-400 {
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity, 1));
+}
+.text-rose-400 {
+  --tw-text-opacity: 1;
+  color: rgb(251 113 133 / var(--tw-text-opacity, 1));
+}
+.text-teal-300 {
+  --tw-text-opacity: 1;
+  color: rgb(94 234 212 / var(--tw-text-opacity, 1));
+}
+.text-teal-400 {
+  --tw-text-opacity: 1;
+  color: rgb(45 212 191 / var(--tw-text-opacity, 1));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+.text-white\/20 {
+  color: rgb(255 255 255 / 0.2);
+}
+.text-white\/30 {
+  color: rgb(255 255 255 / 0.3);
+}
+.text-white\/40 {
+  color: rgb(255 255 255 / 0.4);
+}
+.text-white\/50 {
+  color: rgb(255 255 255 / 0.5);
+}
+.text-white\/60 {
+  color: rgb(255 255 255 / 0.6);
+}
+.text-white\/70 {
+  color: rgb(255 255 255 / 0.7);
+}
+.text-white\/75 {
+  color: rgb(255 255 255 / 0.75);
+}
+.text-white\/80 {
+  color: rgb(255 255 255 / 0.8);
+}
+.text-white\/90 {
+  color: rgb(255 255 255 / 0.9);
+}
+.text-yellow-300 {
+  --tw-text-opacity: 1;
+  color: rgb(253 224 71 / var(--tw-text-opacity, 1));
+}
+.placeholder-white\/20::-moz-placeholder {
+  color: rgb(255 255 255 / 0.2);
+}
+.placeholder-white\/20::placeholder {
+  color: rgb(255 255 255 / 0.2);
+}
+.placeholder-white\/30::-moz-placeholder {
+  color: rgb(255 255 255 / 0.3);
+}
+.placeholder-white\/30::placeholder {
+  color: rgb(255 255 255 / 0.3);
+}
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-100 {
+  opacity: 1;
+}
+.opacity-25 {
+  opacity: 0.25;
+}
+.opacity-60 {
+  opacity: 0.6;
+}
+.opacity-75 {
+  opacity: 0.75;
+}
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-\[0_0_50px_rgba\(0\2c 0\2c 0\2c 0\.5\)\] {
+  --tw-shadow: 0 0 50px rgba(0,0,0,0.5);
+  --tw-shadow-colored: 0 0 50px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-\[0_0_50px_rgba\(15\2c 23\2c 42\2c 0\.8\)\] {
+  --tw-shadow: 0 0 50px rgba(15,23,42,0.8);
+  --tw-shadow-colored: 0 0 50px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-\[0_0_8px_rgba\(59\2c 130\2c 246\2c 0\.6\)\] {
+  --tw-shadow: 0 0 8px rgba(59,130,246,0.6);
+  --tw-shadow-colored: 0 0 8px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-\[0_10px_30px_rgba\(45\2c 212\2c 191\2c 0\.2\)\] {
+  --tw-shadow: 0 10px 30px rgba(45,212,191,0.2);
+  --tw-shadow-colored: 0 10px 30px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-\[0_10px_40px_rgba\(0\2c 0\2c 0\2c 0\.5\)\] {
+  --tw-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  --tw-shadow-colored: 0 10px 40px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-\[0_15px_40px_rgba\(0\2c 0\2c 0\2c 0\.4\)\] {
+  --tw-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  --tw-shadow-colored: 0 15px 40px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-\[0_20px_50px_rgba\(0\2c 0\2c 0\2c 0\.5\)\] {
+  --tw-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  --tw-shadow-colored: 0 20px 50px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-\[0_20px_50px_rgba\(0\2c 0\2c 0\2c 0\.6\)\] {
+  --tw-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  --tw-shadow-colored: 0 20px 50px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-\[0_25px_70px_rgba\(0\2c 0\2c 0\2c 0\.85\)\] {
+  --tw-shadow: 0 25px 70px rgba(0,0,0,0.85);
+  --tw-shadow-colored: 0 25px 70px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-blue-500\/20 {
+  --tw-shadow-color: rgb(59 130 246 / 0.2);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+.shadow-blue-500\/25 {
+  --tw-shadow-color: rgb(59 130 246 / 0.25);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+.shadow-blue-600\/25 {
+  --tw-shadow-color: rgb(37 99 235 / 0.25);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+.shadow-teal-500\/20 {
+  --tw-shadow-color: rgb(20 184 166 / 0.2);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+.outline {
+  outline-style: solid;
+}
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.brightness-\[0\.98\] {
+  --tw-brightness: brightness(0.98);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.contrast-\[1\.03\] {
+  --tw-contrast: contrast(1.03);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.backdrop-blur-lg {
+  --tw-backdrop-blur: blur(16px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.backdrop-blur-md {
+  --tw-backdrop-blur: blur(12px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+.duration-150 {
+  transition-duration: 150ms;
+}
+.duration-200 {
+  transition-duration: 200ms;
+}
+.duration-300 {
+  transition-duration: 300ms;
+}
+.duration-500 {
+  transition-duration: 500ms;
+}
+.duration-700 {
+  transition-duration: 700ms;
+}
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ease-linear {
+  transition-timing-function: linear;
+}
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Custom CSS classes for the portfolio */
+
+/* Custom padding utility */
+.px-xl {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 640px) {
+  .px-xl {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .px-xl {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .px-xl {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+.text-hero {
+  font-size: 4.5rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+@media (min-width: 1280px) {
+  .text-hero {
+    font-size: 8rem;
+  }
+}
+
+.text-section-title {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.accent-text {
+  --tw-text-opacity: 1;
+  color: rgb(0 123 255 / var(--tw-text-opacity, 1));
+}
+
+/* --- CRITICAL ROUTING CSS --- */
+/* Removed hardcoded display rules as React handles component visibility */
+.accent-text {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity, 1));
+}
+.placeholder\:text-\[\#475569\]::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity, 1));
+}
+.placeholder\:text-\[\#475569\]::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity, 1));
+}
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.hover\:scale-110:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.hover\:border-\[\#334155\]:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(51 65 85 / var(--tw-border-opacity, 1));
+}
+.hover\:border-\[\#38BDF8\]\/40:hover {
+  border-color: rgb(56 189 248 / 0.4);
+}
+.hover\:border-gray-700:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity, 1));
+}
+.hover\:border-teal-300:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(94 234 212 / var(--tw-border-opacity, 1));
+}
+.hover\:border-white\/20:hover {
+  border-color: rgb(255 255 255 / 0.2);
+}
+.hover\:bg-\[\#151D2E\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 29 46 / var(--tw-bg-opacity, 1));
+}
+.hover\:bg-\[\#151E2E\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 30 46 / var(--tw-bg-opacity, 1));
+}
+.hover\:bg-\[\#1D4ED8\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
+}
+.hover\:bg-black\/70:hover {
+  background-color: rgb(0 0 0 / 0.7);
+}
+.hover\:bg-blue-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
+}
+.hover\:bg-emerald-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity, 1));
+}
+.hover\:bg-red-500\/20:hover {
+  background-color: rgb(239 68 68 / 0.2);
+}
+.hover\:bg-teal-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 184 166 / var(--tw-bg-opacity, 1));
+}
+.hover\:bg-white\/10:hover {
+  background-color: rgb(255 255 255 / 0.1);
+}
+.hover\:bg-white\/5:hover {
+  background-color: rgb(255 255 255 / 0.05);
+}
+.hover\:pl-2:hover {
+  padding-left: 0.5rem;
+}
+.hover\:text-accent:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 123 255 / var(--tw-text-opacity, 1));
+}
+.hover\:text-red-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(252 165 165 / var(--tw-text-opacity, 1));
+}
+.hover\:text-red-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity, 1));
+}
+.hover\:text-teal-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(94 234 212 / var(--tw-text-opacity, 1));
+}
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+.hover\:opacity-100:hover {
+  opacity: 1;
+}
+.hover\:shadow-\[0_15px_40px_rgba\(45\2c 212\2c 191\2c 0\.3\)\]:hover {
+  --tw-shadow: 0 15px 40px rgba(45,212,191,0.3);
+  --tw-shadow-colored: 0 15px 40px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.focus\:border-\[\#38BDF8\]:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(56 189 248 / var(--tw-border-opacity, 1));
+}
+.focus\:border-teal-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(20 184 166 / var(--tw-border-opacity, 1));
+}
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.focus\:ring-1:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+.focus\:ring-2:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+.focus\:ring-\[\#38BDF8\]:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(56 189 248 / var(--tw-ring-opacity, 1));
+}
+.focus\:ring-white\/50:focus {
+  --tw-ring-color: rgb(255 255 255 / 0.5);
+}
+.active\:scale-90:active {
+  --tw-scale-x: .9;
+  --tw-scale-y: .9;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.active\:scale-95:active {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.active\:scale-\[0\.98\]:active {
+  --tw-scale-x: 0.98;
+  --tw-scale-y: 0.98;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.active\:cursor-grabbing:active {
+  cursor: grabbing;
+}
+.disabled\:opacity-40:disabled {
+  opacity: 0.4;
+}
+.disabled\:opacity-50:disabled {
+  opacity: 0.5;
+}
+.disabled\:opacity-60:disabled {
+  opacity: 0.6;
+}
+.group:hover .group-hover\:w-full {
+  width: 100%;
+}
+.group:hover .group-hover\:translate-x-0 {
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.group\/img:hover .group-hover\/img\:scale-\[1\.02\] {
+  --tw-scale-x: 1.02;
+  --tw-scale-y: 1.02;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+@media not all and (min-width: 768px) {
+  .max-md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+@media (min-width: 640px) {
+  .sm\:col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+  .sm\:col-span-8 {
+    grid-column: span 8 / span 8;
+  }
+  .sm\:-mx-8 {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+  .sm\:mb-8 {
+    margin-bottom: 2rem;
+  }
+  .sm\:ml-12 {
+    margin-left: 3rem;
+  }
+  .sm\:block {
+    display: block;
+  }
+  .sm\:inline {
+    display: inline;
+  }
+  .sm\:flex {
+    display: flex;
+  }
+  .sm\:h-80 {
+    height: 20rem;
+  }
+  .sm\:h-\[150px\] {
+    height: 150px;
+  }
+  .sm\:min-h-\[340px\] {
+    min-height: 340px;
+  }
+  .sm\:w-80 {
+    width: 20rem;
+  }
+  .sm\:w-96 {
+    width: 24rem;
+  }
+  .sm\:max-w-\[280px\] {
+    max-width: 280px;
+  }
+  .sm\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+  .sm\:items-start {
+    align-items: flex-start;
+  }
+  .sm\:items-end {
+    align-items: flex-end;
+  }
+  .sm\:items-center {
+    align-items: center;
+  }
+  .sm\:justify-between {
+    justify-content: space-between;
+  }
+  .sm\:gap-2 {
+    gap: 0.5rem;
+  }
+  .sm\:gap-3 {
+    gap: 0.75rem;
+  }
+  .sm\:gap-8 {
+    gap: 2rem;
+  }
+  .sm\:rounded-2xl {
+    border-radius: 1rem;
+  }
+  .sm\:rounded-3xl {
+    border-radius: 1.5rem;
+  }
+  .sm\:p-5 {
+    padding: 1.25rem;
+  }
+  .sm\:p-7 {
+    padding: 1.75rem;
+  }
+  .sm\:p-8 {
+    padding: 2rem;
+  }
+  .sm\:p-9 {
+    padding: 2.25rem;
+  }
+  .sm\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .sm\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .sm\:text-\[12px\] {
+    font-size: 12px;
+  }
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .sm\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .md\:left-8 {
+    left: 2rem;
+  }
+  .md\:ml-56 {
+    margin-left: 14rem;
+  }
+  .md\:flex {
+    display: flex;
+  }
+  .md\:hidden {
+    display: none;
+  }
+  .md\:h-96 {
+    height: 24rem;
+  }
+  .md\:h-\[180px\] {
+    height: 180px;
+  }
+  .md\:w-96 {
+    width: 24rem;
+  }
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .md\:flex-row {
+    flex-direction: row;
+  }
+  .md\:items-end {
+    align-items: flex-end;
+  }
+  .md\:self-end {
+    align-self: flex-end;
+  }
+  .md\:p-10 {
+    padding: 2.5rem;
+  }
+  .md\:p-16 {
+    padding: 4rem;
+  }
+  .md\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+  .lg\:col-span-7 {
+    grid-column: span 7 / span 7;
+  }
+  .lg\:-mx-16 {
+    margin-left: -4rem;
+    margin-right: -4rem;
+  }
+  .lg\:flex {
+    display: flex;
+  }
+  .lg\:hidden {
+    display: none;
+  }
+  .lg\:h-\[210px\] {
+    height: 210px;
+  }
+  .lg\:h-\[400px\] {
+    height: 400px;
+  }
+  .lg\:w-\[400px\] {
+    width: 400px;
+  }
+  .lg\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .lg\:grid-cols-\[1\.2fr_1\.8fr\] {
+    grid-template-columns: 1.2fr 1.8fr;
+  }
+  .lg\:grid-cols-\[1\.2fr_1fr\] {
+    grid-template-columns: 1.2fr 1fr;
+  }
+  .lg\:justify-end {
+    justify-content: flex-end;
+  }
+  .lg\:gap-12 {
+    gap: 3rem;
+  }
+  .lg\:gap-4 {
+    gap: 1rem;
+  }
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
+  .lg\:p-10 {
+    padding: 2.5rem;
+  }
+  .lg\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .lg\:pb-12 {
+    padding-bottom: 3rem;
+  }
+  .lg\:pt-20 {
+    padding-top: 5rem;
+  }
+  .lg\:pt-\[15vh\] {
+    padding-top: 15vh;
+  }
+  .lg\:text-\[3\.5rem\] {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .xl\:-mx-32 {
+    margin-left: -8rem;
+    margin-right: -8rem;
+  }
+  .xl\:flex-row {
+    flex-direction: row;
+  }
+  .xl\:justify-between {
+    justify-content: space-between;
+  }
+  .xl\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  .xl\:text-\[3\.85rem\] {
+    font-size: 3.85rem;
+  }
+}
+</style></head>
+  <body class="bg-[#07090e] text-white">
+    <div id="root"><div class="min-h-screen flex flex-col bg-dark text-light relative"><header class="fixed top-0 left-0 w-full z-50 bg-dark/70 backdrop-blur-lg border-b border-white/10 rounded-b-xl shadow-lg transition-transform duration-300 ease-in-out translate-y-0"><style>
+@keyframes shimmer {
+  0% { transform: translateX(-100%) skewX(-25deg); }
+  100% { transform: translateX(300%) skewX(-25deg); }
+}
+
+.shimmer-element {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+  transform: translateX(-100%) skewX(-25deg); 
+  animation: shimmer 4s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* New Spotlight Button Styles */
+.spotlight-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-btn::before {
+  content: '';
+  position: absolute;
+  left: var(--x, 50%);
+  top: var(--y, 50%);
+  width: 100px; /* Size of the spotlight */
+  height: 100px;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.spotlight-btn:hover::before {
+  opacity: 1;
+}
+</style><div class="shimmer-element absolute inset-0"></div><div class="py-4 relative z-10"><div class="px-xl flex justify-between items-center"><a href="#home" class="text-xl font-bold transition-color hover:text-accent">Portfolio</a><div class="hidden lg:flex items-center gap-4"><nav class="nav flex gap-6"><a href="#home" class="group relative px-2 py-1 text-white/80 hover:text-white transition-colors duration-300 font-medium text-white">Home<span class="absolute left-0 bottom-0 h-0.5 bg-white transition-all duration-300 w-full"></span></a><a href="#about" class="group relative px-2 py-1 text-white/80 hover:text-white transition-colors duration-300 font-medium">About<span class="absolute left-0 bottom-0 h-0.5 bg-white transition-all duration-300 w-0 group-hover:w-full"></span></a><a href="#skills" class="group relative px-2 py-1 text-white/80 hover:text-white transition-colors duration-300 font-medium">Skills<span class="absolute left-0 bottom-0 h-0.5 bg-white transition-all duration-300 w-0 group-hover:w-full"></span></a><a href="#contact" class="group relative px-2 py-1 text-white/80 hover:text-white transition-colors duration-300 font-medium">Contact<span class="absolute left-0 bottom-0 h-0.5 bg-white transition-all duration-300 w-0 group-hover:w-full"></span></a></nav><a href="https://github.com/AmoghHosamane" target="_blank" rel="noopener noreferrer" class="spotlight-btn p-3 rounded-full
+                         bg-black/50 text-white/90 
+                         backdrop-blur-sm border border-white/20 
+                         shadow-lg
+                         transition-all duration-300 
+                         hover:bg-black/70 hover:text-white 
+                         active:scale-95
+                         focus:outline-none focus:ring-2 focus:ring-white/50
+                         flex items-center justify-center" aria-label="View GitHub profile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-white"><path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.72-4.043-1.608-4.043-1.608-.546-1.386-1.332-1.755-1.332-1.755-1.09-.745.083-.728.083-.728 1.205.084 1.838 1.238 1.838 1.238 1.07 1.833 2.81 1.303 3.493.996.108-.775.418-1.303.762-1.603-2.67-.305-5.467-1.334-5.467-5.943 0-1.31.468-2.383 1.236-3.22-.124-.305-.536-1.52.117-3.176 0 0 1.008-.323 3.302 1.232 1.05-.29 2.16-.435 3.268-.44 1.107.005 2.217.15 3.268.44 2.294-1.555 3.302-1.232 3.302-1.232.653 1.656.24 2.87.118 3.176.77.837 1.233 1.91 1.233 3.22 0 4.62-2.8 5.633-5.475 5.934.426.37.817 1.102.817 2.22 0 1.605-.015 2.898-.015 3.28 0 .317.218.687.828.575C20.565 21.802 24 17.307 24 12c0-6.627-5.373-12-12-12z"></path></svg></a><a href="#work" class="spotlight-btn px-6 py-3 text-sm font-semibold rounded-[30px]
+                         bg-black/50 text-white/90 
+                         backdrop-blur-sm border border-white/20 
+                         shadow-lg
+                         transition-all duration-300 
+                         hover:bg-black/70 hover:text-white 
+                         active:scale-95
+                         focus:outline-none focus:ring-2 focus:ring-white/50">Projects</a></div><button class="lg:hidden text-white/80 hover:text-accent" aria-label="Open menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div></div></header><main class="flex-grow relative"><div class="min-h-[400px]" style="opacity: 0; transform: translateY(15px);"><section class="hero-section px-xl pt-[12vh] lg:pt-[15vh] pb-[10vh] relative" id="home"><style>
+  #home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 45% at 50% 35%, rgba(14, 42, 90, 0.18), transparent 75%), #07090E;
+    z-index: -1;
+  }
+</style><div class="relative -mx-4 sm:-mx-8 lg:-mx-16 xl:-mx-32 rounded-3xl overflow-hidden mb-16 border border-[#1E293B]/60 shadow-[0_25px_70px_rgba(0,0,0,0.85)] bg-[#07090E]"><div class="cursor-grid" style="background-color: rgb(7, 9, 14); width: 100%;"><canvas class="cursor-grid__canvas" aria-hidden="true" style="background-color: rgb(7, 9, 14);"></canvas><div class="cursor-grid__content"><div class="px-6 sm:px-10 lg:px-16 xl:px-24 pt-14 pb-10 lg:pt-20 lg:pb-12"><div><div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center"><div class="lg:col-span-7 flex flex-col justify-center"><div class="flex items-center gap-2 text-[11px] sm:text-[12px] font-mono font-semibold tracking-[0.22em] text-[#94A3B8] uppercase mb-5"><span>SOFTWARE ENGINEERING</span><span class="text-[#475569]">•</span><span>AI SYSTEMS</span></div><h1 class="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[3.85rem] font-bold text-white tracking-tight leading-[1.12] mb-6">I build <span class="text-[#3B82F6]">AI products</span><br>and the systems behind them.</h1><p class="text-base sm:text-lg text-[#94A3B8] leading-relaxed max-w-xl mb-8 font-light">From LLM applications and multi-agent systems to reliable backend infrastructure, I turn technical ideas into working software.</p><div class="flex flex-wrap items-center gap-3.5"><a href="#work" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-medium text-sm transition-all duration-200 active:scale-95 shadow-lg shadow-blue-600/25"><span>View projects</span><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" class="w-4 h-4 stroke-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a><a href="https://github.com/Amoghhosamane" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-3 rounded-lg bg-[#0C111C] hover:bg-[#151D2E] text-white font-medium text-sm border border-[#1E293B] hover:border-[#334155] transition-all duration-200 active:scale-95"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" class="w-4 h-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><span>GitHub</span></a></div></div><div class="lg:col-span-5 flex justify-center lg:justify-end"><div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px]"><div class="absolute inset-0 rounded-full bg-gradient-to-b from-[#111827] to-[#0A0E17] border border-[#1E293B]/70 overflow-hidden shadow-[0_0_50px_rgba(15,23,42,0.8)]"><img alt="Amogh Hosamane" class="w-full h-full object-cover object-top filter contrast-[1.03] brightness-[0.98] transition-transform duration-700 ease-out hover:scale-105" src="/src/assets/my-face.png"></div></div></div></div><div class="mt-14 pt-8 border-t border-[#1E293B]/70 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4"><div class="flex items-start gap-3.5"><div class="text-[#3B82F6] shrink-0 mt-0.5"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M19.938 10.5a4 4 0 0 1 .585.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg></div><div><div class="text-white text-sm font-semibold tracking-tight">AI Engineering</div><div class="text-[#64748B] text-xs mt-1 leading-relaxed">LLM Apps • Multi-Agent Systems • RAG • Evaluation</div></div></div><div class="flex items-start gap-3.5"><div class="text-[#3B82F6] shrink-0 mt-0.5"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect><rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg></div><div><div class="text-white text-sm font-semibold tracking-tight">Backend &amp; Systems</div><div class="text-[#64748B] text-xs mt-1 leading-relaxed">Python • FastAPI • PostgreSQL • WebSockets • Cloud</div></div></div><div class="flex items-start gap-3.5"><div class="text-[#3B82F6] shrink-0 mt-0.5"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"></path><path d="M8.5 2h7"></path><path d="M7 16h10"></path></svg></div><div><div class="text-white text-sm font-semibold tracking-tight">Research</div><div class="text-[#64748B] text-xs mt-1 leading-relaxed">Applied ML • Experimentation • Reproducibility</div></div></div><div class="flex items-start gap-3.5"><div class="text-[#3B82F6] shrink-0 mt-0.5"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg></div><div><div class="text-white text-sm font-semibold tracking-tight">Product Engineering</div><div class="text-[#64748B] text-xs mt-1 leading-relaxed">Full-Stack • Scalable Systems • Startup Projects</div></div></div></div></div></div></div></div></div><div style="position: relative; overflow: hidden;"><div style="opacity: 0; transform: translateY(75px);"><section id="experience" class="scroll-mt-28 py-16 text-white"><div class="max-w-7xl mx-auto"><div class="mb-10"><h2 class="text-4xl md:text-5xl font-extrabold pb-1 mb-2">Experience</h2><p class="text-sm text-white/60">Research Internships &amp; Professional Engagements</p></div><div><div class="relative"><div class="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-white/10 hidden sm:block"></div><div class="flex flex-col gap-8"><article class="relative sm:ml-12 py-6" style="opacity: 0; transform: translateY(20px);"><div class="absolute -left-[3.45rem] top-8 hidden sm:flex items-center justify-center w-5 h-5 rounded-full border-2 bg-black border-cyan-400"><div class="w-2 h-2 rounded-full bg-cyan-400"></div></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4"><div><h3 class="text-xl font-bold text-white mb-1">Breakthrough Medical Solutions</h3><p class="text-teal-400 font-semibold text-base">Full Stack Developer Intern / Consultant</p></div><div class="flex flex-col items-start sm:items-end gap-1 text-xs text-white/60 shrink-0"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-1 opacity-60"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Present</span><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-1 opacity-60"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>London · Hybrid</span></div></div><ul class="list-none space-y-1.5 mb-5"><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Built an AI-powered clinical simulation platform for UK medical universities using Next.js, TypeScript, FastAPI, Python, Supabase &amp; LLMs.</li><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Developed real-time collaborative clinical sessions using WebSockets, enabling educator-led and multi-student simulations.</li><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Engineered LLM-powered patient interactions with case-aware reasoning, progressive disclosure and structured clinical data.</li><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Built scalable case-authoring and analytics workflows covering history, examination, investigations, diagnosis and management.</li></ul><div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800"><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Next.js</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">TypeScript</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">FastAPI</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Python</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Supabase</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">LLMs</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">WebSockets</span></div></article><article class="relative sm:ml-12 py-6" style="opacity: 0; transform: translateY(20px);"><div class="absolute -left-[3.45rem] top-8 hidden sm:flex items-center justify-center w-5 h-5 rounded-full border-2 bg-black border-emerald-400"><div class="w-2 h-2 rounded-full bg-emerald-400"></div></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4"><div><h3 class="text-xl font-bold text-white mb-1">University of Galway</h3><p class="text-teal-400 font-semibold text-base">Research Intern</p></div><div class="flex flex-col items-start sm:items-end gap-1 text-xs text-white/60 shrink-0"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-1 opacity-60"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Apr 2025 – Present</span><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-1 opacity-60"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Galway, Ireland · Remote</span></div></div><ul class="list-none space-y-1.5 mb-5"><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Researching and studying Multi-Agent AI Systems under Prof. Saeed Alshami.</li><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Working on multi-agent AI research with the goal of developing and evaluating a research contribution suitable for submission to top-tier AI/ML conferences.</li></ul><div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800"><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Multi-Agent AI</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">AI Systems</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">LLMs</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Research</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Python</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Machine Learning</span></div></article><article class="relative sm:ml-12 py-6" style="opacity: 0; transform: translateY(20px);"><div class="absolute -left-[3.45rem] top-8 hidden sm:flex items-center justify-center w-5 h-5 rounded-full border-2 bg-black border-blue-400"><div class="w-2 h-2 rounded-full bg-blue-400"></div></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4"><div><h3 class="text-xl font-bold text-white mb-1">National University of Singapore (NUS)</h3><p class="text-teal-400 font-semibold text-base">Summer Research Intern</p></div><div class="flex flex-col items-start sm:items-end gap-1 text-xs text-white/60 shrink-0"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-1 opacity-60"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Apr 2026 – Aug 2026</span><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-1 opacity-60"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Singapore · Remote</span></div></div><ul class="list-none space-y-1.5 mb-5"><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Researching Transformer architectures and LLMs</li><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Contributing to an AI-powered LMS project</li><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Building intelligent academic assistants</li><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Optimizing backend systems and APIs</li><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Exploring scalable AI system design</li></ul><div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800"><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Next.js</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Flask</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">LLMs</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Transformers</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Python</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">AI Automation</span></div></article><article class="relative sm:ml-12 py-6" style="opacity: 0; transform: translateY(20px);"><div class="absolute -left-[3.45rem] top-8 hidden sm:flex items-center justify-center w-5 h-5 rounded-full border-2 bg-black border-yellow-400"><div class="w-2 h-2 rounded-full bg-yellow-400"></div></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4"><div><h3 class="text-xl font-bold text-white mb-1">Australian National University (ANU)</h3><p class="text-teal-400 font-semibold text-base">Volunteer Software Engineer</p></div><div class="flex flex-col items-start sm:items-end gap-1 text-xs text-white/60 shrink-0"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-1 opacity-60"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Canberra, Australia · Remote</span></div></div><ul class="list-none space-y-1.5 mb-5"><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Developing decentralized applications using Solid standards</li><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Working with WebID authentication and Pod-based storage</li><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Improving responsiveness and frontend performance</li><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Contributing to scalable AI system exploration</li></ul><div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800"><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Flutter</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Dart</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Python</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">C++</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Solid Pods</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">WebID</span></div></article><article class="relative sm:ml-12 py-6" style="opacity: 0; transform: translateY(20px);"><div class="absolute -left-[3.45rem] top-8 hidden sm:flex items-center justify-center w-5 h-5 rounded-full border-2 bg-black border-purple-400"><div class="w-2 h-2 rounded-full bg-purple-400"></div></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4"><div><h3 class="text-xl font-bold text-white mb-1">Open Source Connect (OSCG)</h3><p class="text-teal-400 font-semibold text-base">Mentor &amp; Contributor</p></div><div class="flex flex-col items-start sm:items-end gap-1 text-xs text-white/60 shrink-0"><span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-1 opacity-60"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Jan 2026 – Feb 2026</span></div></div><ul class="list-none space-y-1.5 mb-5"><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Mentored students in Python and AI projects</li><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Guided collaborative development workflows</li><li class="flex items-start gap-2 text-white/70 text-sm leading-relaxed"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>Helped with open-source software engineering</li></ul><div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800"><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Python</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">AI</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Mentorship</span><span class="text-xs px-3 py-1 font-medium border border-white/10 rounded-full text-white/80 bg-white/5">Open Source</span></div></article></div></div></div></div></section></div></div><section id="top-projects" class="scroll-mt-24 py-16 text-white relative"><div class="max-w-7xl mx-auto"><div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"><div><div class="text-[12px] font-bold tracking-widest text-blue-400 uppercase mb-3 font-mono">SELECTED WORK</div><h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">Projects built for real-world use</h2><p class="text-[#94A3B8] text-sm sm:text-base mt-3 max-w-2xl font-light">Production-minded systems across AI, healthcare, and developer tooling.</p></div><div class="flex items-center gap-4 self-start md:self-end"><button disabled="" aria-label="Previous project page" class="p-2 transition-colors duration-200 text-[#334155] cursor-not-allowed"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="w-4 h-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg></button><span class="font-mono text-xs sm:text-sm text-white/90 font-medium tracking-wider">01 / 03</span><button aria-label="Next project page" class="p-2 transition-colors duration-200 text-[#94A3B8] hover:text-white cursor-pointer active:scale-95"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="w-4 h-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path></svg></button></div></div><div class="space-y-12"><div class="space-y-12" style="opacity: 0; transform: translateY(15px);"><div class="rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 bg-[#090D14]/90 border border-[#1E293B] shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-[#334155]"><div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"><div class="lg:col-span-7 w-full"><div class="w-full rounded-xl sm:rounded-2xl overflow-hidden bg-[#0B0F17] border border-[#1E293B] shadow-[0_20px_50px_rgba(0,0,0,0.6)] flex flex-col transition-all duration-300"><div class="h-10 px-4 bg-[#0E1522] border-b border-[#1E293B] flex items-center justify-between select-none"><div class="flex items-center gap-2"><div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/80 inline-block"></span><span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/80 inline-block"></span><span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/80 inline-block"></span></div><div class="flex items-center gap-1 ml-2 text-[#475569] text-xs"><span>&lt;</span><span>&gt;</span></div></div><div class="flex items-center justify-center px-4 py-1 rounded-md bg-[#070A10] border border-[#1E293B] text-[11px] font-mono text-[#94A3B8] max-w-[220px] sm:max-w-[280px] truncate"><span class="text-[#38BDF8] mr-1.5">https://</span>breakthrough-med.com</div><div class="w-8 flex justify-end text-[#475569] text-xs"><span>•••</span></div></div><div class="p-0 bg-[#090D15] text-[#CBD5E1] font-sans text-xs min-h-[300px] sm:min-h-[340px] flex flex-col justify-between overflow-hidden"><div class="relative w-full h-full min-h-[300px] sm:min-h-[340px] bg-[#070A10] flex items-center justify-center overflow-hidden group/img"><img alt="Breakthrough Medical Solutions live interface" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover/img:scale-[1.02]" loading="lazy" src="/src/assets/breakthrough-med.png"><div class="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-[#090D15]/80 to-transparent pointer-events-none"></div></div></div></div></div><div class="lg:col-span-5 flex flex-col justify-between space-y-6"><div><div class="text-[11px] sm:text-xs font-mono font-bold tracking-widest text-blue-400 uppercase mb-2">HEALTHCARE AI</div><h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">Breakthrough Medical Solutions</h3><p class="text-sm sm:text-base text-[#94A3B8] mt-2 mb-6 font-light leading-relaxed">An AI-powered clinical simulation platform for university medical training.</p><ul class="space-y-3.5"><li class="flex items-start gap-3 text-xs sm:text-sm text-[#CBD5E1] leading-relaxed"><span class="mt-1.5 w-2 h-2 rounded-full bg-blue-500 shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.6)]"></span><span>Case-aware AI patients with progressive clinical disclosures</span></li><li class="flex items-start gap-3 text-xs sm:text-sm text-[#CBD5E1] leading-relaxed"><span class="mt-1.5 w-2 h-2 rounded-full bg-blue-500 shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.6)]"></span><span>Real-time simulation rooms built with WebSockets</span></li><li class="flex items-start gap-3 text-xs sm:text-sm text-[#CBD5E1] leading-relaxed"><span class="mt-1.5 w-2 h-2 rounded-full bg-blue-500 shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.6)]"></span><span>Next.js, FastAPI, TypeScript, Supabase</span></li></ul></div><div class="pt-6 border-t border-[#1E293B]"><div class="mb-6"><div class="text-[10px] font-mono uppercase tracking-widest text-[#64748B] mb-2 font-semibold">TECH STACK</div><div class="text-xs text-[#CBD5E1] font-mono leading-relaxed">Next.js   TypeScript   FastAPI   Python   Supabase   WebSockets   HTML</div></div><div class="flex flex-wrap items-center gap-3"><a href="https://breakthrough-med.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm transition-all duration-200 active:scale-95 shadow-md shadow-blue-500/20"><span>View live product</span><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" class="w-4 h-4 stroke-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd"></path></svg></a><a href="https://github.com/Amoghhosamane" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#0E1522] hover:bg-[#151E2E] text-white font-medium text-xs sm:text-sm border border-[#1E293B] hover:border-[#334155] transition-all duration-200 active:scale-95"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" class="w-3.5 h-3.5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><span>GitHub</span><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" class="w-3.5 h-3.5 text-[#64748B]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd"></path></svg></a></div></div></div></div></div><div class="rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 bg-[#090D14]/90 border border-[#1E293B] shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-[#334155]"><div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"><div class="lg:col-span-7 w-full"><div class="w-full rounded-xl sm:rounded-2xl overflow-hidden bg-[#0B0F17] border border-[#1E293B] shadow-[0_20px_50px_rgba(0,0,0,0.6)] flex flex-col transition-all duration-300"><div class="h-10 px-4 bg-[#0E1522] border-b border-[#1E293B] flex items-center justify-between select-none"><div class="flex items-center gap-2"><div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/80 inline-block"></span><span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/80 inline-block"></span><span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/80 inline-block"></span></div><div class="flex items-center gap-1 ml-2 text-[#475569] text-xs"><span>&lt;</span><span>&gt;</span></div></div><div class="flex items-center justify-center px-4 py-1 rounded-md bg-[#070A10] border border-[#1E293B] text-[11px] font-mono text-[#94A3B8] max-w-[220px] sm:max-w-[280px] truncate"><span class="text-[#38BDF8] mr-1.5">https://</span>skillorbitlearn.vercel.app/dashboard</div><div class="w-8 flex justify-end text-[#475569] text-xs"><span>•••</span></div></div><div class="p-0 bg-[#090D15] text-[#CBD5E1] font-sans text-xs min-h-[300px] sm:min-h-[340px] flex flex-col justify-between overflow-hidden"><div class="relative w-full h-full min-h-[300px] sm:min-h-[340px] bg-[#070A10] flex items-center justify-center overflow-hidden group/img"><img alt="Skill Orbit Learning System live interface" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover/img:scale-[1.02]" loading="lazy" src="/src/assets/skillorbit.png"><div class="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-[#090D15]/80 to-transparent pointer-events-none"></div></div></div></div></div><div class="lg:col-span-5 flex flex-col justify-between space-y-6"><div><div class="text-[11px] sm:text-xs font-mono font-bold tracking-widest text-blue-400 uppercase mb-2">FULL-STACK PLATFORM</div><h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">Skill Orbit Learning System</h3><p class="text-sm sm:text-base text-[#94A3B8] mt-2 mb-6 font-light leading-relaxed">A full-stack learning platform with structured courses and user analytics.</p><ul class="space-y-3.5"><li class="flex items-start gap-3 text-xs sm:text-sm text-[#CBD5E1] leading-relaxed"><span class="mt-1.5 w-2 h-2 rounded-full bg-blue-500 shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.6)]"></span><span>Next.js App Router architecture with serverless API functions</span></li><li class="flex items-start gap-3 text-xs sm:text-sm text-[#CBD5E1] leading-relaxed"><span class="mt-1.5 w-2 h-2 rounded-full bg-blue-500 shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.6)]"></span><span>User authentication and role-based sessions powered by NextAuth</span></li><li class="flex items-start gap-3 text-xs sm:text-sm text-[#CBD5E1] leading-relaxed"><span class="mt-1.5 w-2 h-2 rounded-full bg-blue-500 shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.6)]"></span><span>Centralized MongoDB Atlas integration with real-time course tracking</span></li></ul></div><div class="pt-6 border-t border-[#1E293B]"><div class="mb-6"><div class="text-[10px] font-mono uppercase tracking-widest text-[#64748B] mb-2 font-semibold">TECH STACK</div><div class="text-xs text-[#CBD5E1] font-mono leading-relaxed">Next.js   TypeScript   MongoDB Atlas   NextAuth   TailwindCSS   Vercel</div></div><div class="flex flex-wrap items-center gap-3"><a href="https://skillorbitlearn.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm transition-all duration-200 active:scale-95 shadow-md shadow-blue-500/20"><span>View live product</span><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" class="w-4 h-4 stroke-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd"></path></svg></a><a href="https://github.com/Amoghhosamane/learning" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#0E1522] hover:bg-[#151E2E] text-white font-medium text-xs sm:text-sm border border-[#1E293B] hover:border-[#334155] transition-all duration-200 active:scale-95"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" class="w-3.5 h-3.5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><span>GitHub</span><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" class="w-3.5 h-3.5 text-[#64748B]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd"></path></svg></a></div></div></div></div></div></div></div></div></section><div style="position: relative; overflow: hidden;"><div style="opacity: 0; transform: translateY(75px);"><div class="mt-8"><h3 class="text-2xl font-semibold mb-4">Certifications</h3><div class="flex flex-wrap gap-3"><a href="https://coursera.org/share/2e28f39fedef9792a6b0a31de40f264d" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-4 py-2 rounded-md text-sm font-medium shadow-sm transition-transform duration-150 bg-white text-dark hover:scale-105" aria-label="Open Nvidia - Certification"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="#111827"></path></svg><span>Nvidia - Certification<span class="ml-2 text-xs text-white/60">· Coursera</span></span></a><a href="https://www.theforage.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_6KwM5DaeEMWteEprr_1766218017786_completion_certificate.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-4 py-2 rounded-md text-sm font-medium shadow-sm transition-transform duration-150 bg-white text-dark hover:scale-105" aria-label="Open AWS - certification"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="#111827"></path></svg><span>AWS - certification<span class="ml-2 text-xs text-white/60">· The Forage</span></span></a><a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_6KwM5DaeEMWteEprr_1765053854242_completion_certificate.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-4 py-2 rounded-md text-sm font-medium shadow-sm transition-transform duration-150 bg-white text-dark hover:scale-105" aria-label="Open Deloitte - certification"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="#111827"></path></svg><span>Deloitte - certification<span class="ml-2 text-xs text-white/60">· The Forage</span></span></a><a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=3F6777C3950287200568024C8DCEDCE8439C7794682DCFEF6E1044849EFA2384" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-4 py-2 rounded-md text-sm font-medium shadow-sm transition-transform duration-150 bg-white text-dark hover:scale-105" aria-label="Open Oracle - certification"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="#111827"></path></svg><span>Oracle - certification<span class="ml-2 text-xs text-white/60">· Oracle university</span></span></a><a href="https://www.hackerrank.com/certificates/044dc76c8648" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-4 py-2 rounded-md text-sm font-medium shadow-sm transition-transform duration-150 bg-white text-dark hover:scale-105" aria-label="Open Hackerrank - certification"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="#111827"></path></svg><span>Hackerrank - certification<span class="ml-2 text-xs text-white/60">· Hackerrank</span></span></a><a href="https://simpli-web.app.link/e/LXxa7lUxkZb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-4 py-2 rounded-md text-sm font-medium shadow-sm transition-transform duration-150 bg-white text-dark hover:scale-105" aria-label="Open Google cloud - certification"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="#111827"></path></svg><span>Google cloud - certification<span class="ml-2 text-xs text-white/60">· Simplilearn|SkillUp</span></span></a><a href="#" target="_self" class="inline-flex items-center gap-3 px-4 py-2 rounded-md text-sm font-medium shadow-sm transition-transform duration-150 bg-white/6 text-white/70 cursor-not-allowed" aria-label="Open Many more"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="#111827"></path></svg><span>Many more</span></a></div></div></div></div></section></div></main><footer class="relative overflow-hidden z-10"><style>
+@keyframes shimmer {
+  0% { transform: translateX(-100%) skewX(-25deg); }
+  100% { transform: translateX(300%) skewX(-25deg); }
+}
+
+.shimmer-element-footer {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+  transform: translateX(-100%) skewX(-25deg); 
+  animation: shimmer 4s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* UPDATED: Glow is now larger and more blurred */
+.footer-blue-glow {
+  position: absolute;
+  bottom: -100px; /* Lowered to spread the glow upwards more naturally */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px; /* Significantly wider glow */
+  height: 300px; /* Taller glow */
+  background: radial-gradient(circle, rgba(29, 78, 216, 0.4) 0%, rgba(29, 78, 216, 0) 70%);
+  filter: blur(100px); /* Increased blur for a softer, more spread-out effect */
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 50%;
+}
+</style><div class="site-footer p-xl pt-20 pb-10 bg-dark/70 backdrop-blur-lg border-t border-white/10 rounded-t-3xl relative overflow-hidden"><div class="shimmer-element-footer absolute inset-0"></div><div class="footer-blue-glow"></div><div class="footer-grid grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10"><div class="footer-brand"><a href="#home" class="text-xl font-bold transition-colors hover:text-accent flex items-center gap-2"><svg class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>Amogh Hosamane</a><p class="text-white/60 max-w-sm mt-4">Software engineering, architecture, and systems design for products that perform and last.</p></div><div class="footer-col"><h5 class="text-accent mb-4 text-lg font-semibold border-b border-accent/20 pb-2">Contact</h5><ul class="list-none space-y-2 text-white/80"><li><a href="mailto:amoghvarsh9614@gmail.com" class="hover:text-accent transition">amoghvarsh9614@gmail.com</a></li><li>India / Remote</li></ul></div><div class="footer-col"><h5 class="text-accent mb-4 text-lg font-semibold border-b border-accent/20 pb-2">Connect</h5><div class="footer-socials flex gap-4 mt-6"><a href="https://github.com/Amoghhosamane" target="_blank" title="GitHub" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full text-white/70 transition-all duration-300 hover:text-accent hover:scale-110"><svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.72-4.043-1.608-4.043-1.608-.546-1.386-1.332-1.755-1.332-1.755-1.09-.745.083-.728.083-.728 1.205.084 1.838 1.238 1.838 1.238 1.07 1.833 2.81 1.303 3.493.996.108-.775.418-1.303.762-1.603-2.67-.305-5.467-1.334-5.467-5.943 0-1.31.468-2.383 1.236-3.22-.124-.305-.536-1.52.117-3.176 0 0 1.008-.323 3.302 1.232 1.05-.29 2.16-.435 3.268-.44 1.107.005 2.217.15 3.268.44 2.294-1.555 3.302-1.232 3.302-1.232.653 1.656.24 2.87.118 3.176.77.837 1.233 1.91 1.233 3.22 0 4.62-2.8 5.633-5.475 5.934.426.37.817 1.102.817 2.22 0 1.605-.015 2.898-.015 3.28 0 .317.218.687.828.575C20.565 21.802 24 17.307 24 12c0-6.627-5.373-12-12-12z"></path></svg></a><a href="https://www.linkedin.com/in/amogh-s-hosamane-835823258/" target="_blank" title="LinkedIn" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full text-white/70 transition-all duration-300 hover:text-accent hover:scale-110"><svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.263-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a><a href="https://x.com/amoghh09?s=21" target="_blank" title="X (Twitter)" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full text-white/70 transition-all duration-300 hover:text-accent hover:scale-110"><svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.682l-8.026 9.177 9.876 13.67H11.55l-6.56-9.136L1.87 23.99H.04l8.36-9.584L-1.77 1.153h3.766l5.772 7.07 7.422-7.07zM12.35 21.056h2.24L4.82 2.946H2.47L12.35 21.056z"></path></svg></a></div></div></div><div class="footer-bottom mt-16 pt-5 border-t border-white/10 flex justify-between text-sm text-white/50 flex-wrap gap-4 relative z-10"><span>© 2025 Amogh Hosamane. All rights reserved.</span></div></div></footer></div></div>
+    <script type="module" src="/src/main.jsx?t=1792775288621"></script>
+  
+</body></html>

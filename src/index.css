@@ -3,27 +3,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html,
+  body {
+    background-color: #07090e;
+    color: #f8fafc;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 /* Custom CSS classes for the portfolio */
 
 /* Custom padding utility */
 .px-xl {
-    @apply px-4 sm:px-8 lg:px-16 xl:px-32;
+  @apply px-4 sm:px-8 lg:px-16 xl:px-32;
 }
 
 .text-hero {
-    @apply text-7xl xl:text-[8rem] font-extrabold;
+  @apply text-7xl xl:text-[8rem] font-extrabold;
 }
 
 .text-section-title {
-    @apply text-5xl font-bold;
+  @apply text-5xl font-bold;
 }
 
 .accent-text {
-    @apply text-accent;
+  @apply text-accent;
 }
 
 /* --- CRITICAL ROUTING CSS --- */
 /* Removed hardcoded display rules as React handles component visibility */
 .accent-text {
-    @apply text-blue-500;
+  @apply text-blue-500;
 }
