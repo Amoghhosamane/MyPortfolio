@@ -616,7 +616,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="hero-section px-xl pt-20 sm:pt-24 lg:pt-24 pb-[10vh] relative" id="home">
+    <section className="hero-section px-xl pt-[74px] sm:pt-[76px] pb-[10vh] relative" id="home">
       <style>{customHomeStyles}</style>
 
       {/* HERO SECTION with Interactive CursorGrid (Monochrome / White Grid Design) */}
